@@ -1,0 +1,59 @@
+@use "src/styles/foundations/_responsive.scss" as *;
+
+.homeHero {
+   height: calc(100vh - 56px);
+    
+    max-height: 850px;
+    padding-top: 4rem;
+    position:relative;
+    @include breakpoint(w-med) {
+      height:auto;
+      min-height: 450px;
+      padding-top: 0rem;
+    }
+
+  }
+
+  .homeHeroText {
+    width:50%;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1rem;
+
+    @include breakpoint(w-med) {
+      width:100%;
+      padding-top:2rem;
+      padding-bottom:24rem;
+    }
+
+  }
+
+  .homeImageContainer{
+    height:90%;
+    width:85%;
+    position: absolute;
+    bottom:0;
+    right: 0;
+
+    @include breakpoint(w-med) {
+      width:100%;
+
+    }
+
+  }
+
+.homeImage{
+  position: absolute;
+  bottom:0;
+  right: 0;
+  width: max-content;
+  max-height: max-content;
+  height: 100%;
+  object-fit: contain; /* Ensures the image fits without distortion */
+  @include breakpoint(w-med) {
+   max-width:26rem;
+   width:100%;
+  }
+
+}
+

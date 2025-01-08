@@ -1,0 +1,20 @@
+.navbar {
+    display: grid;
+    grid-template-columns: 48px auto;
+   align-content: center;
+    height: 56px;
+
+
+
+  }
+
+ .navitems {
+    display: flex;
+    align-items: flex-start;
+
+
+ } 
+
+ .navlogo{
+   width:3rem;
+ }
