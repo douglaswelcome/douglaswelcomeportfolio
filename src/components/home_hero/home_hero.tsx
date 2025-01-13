@@ -12,6 +12,8 @@ export default function HomeHero() {
         </h4>
       </div>
       <div className={styles.homeImageContainer}>
+      <div className={styles.circle2} />
+      <div className={styles.circle3} />
         <Image
           className={styles.homeImage}
           src="/headshot.png"
@@ -20,6 +22,8 @@ export default function HomeHero() {
           alt="Picture of the author"
           priority={true}
         />
+        <div className={styles.circle1} />
+       
       </div>
     </div>
   );

@@ -1,0 +1,38 @@
+@use "src/styles/foundations/_responsive.scss" as *;
+
+.footer {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-content: center;
+    height: 56px;
+
+   @include breakpoint(w-sm){
+      width:100%;
+   } 
+  }
+
+ .left_top {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  gap: .25rem;
+
+ } 
+
+ .footer_logo {
+  width:1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ }
+
+ .footericons {
+    display: flex;
+    align-items: flex-start;
+
+
+ } 
+
+ .navlogo{
+   width:2rem;
+ }

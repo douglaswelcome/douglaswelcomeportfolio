@@ -1,0 +1,14 @@
+// @use "src/styles/foundations/_responsive.scss" as *;
+@use "src/styles/foundations/_colors.scss" as *;
+
+.caseCard{
+  border: solid var(--color-hairline);
+  border-radius:1rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 50% 50%;
+}
+
+.caseCardLeft {
+  padding:1.5rem;
+}

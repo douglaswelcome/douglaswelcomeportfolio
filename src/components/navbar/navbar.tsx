@@ -9,11 +9,11 @@ export default function Navbar() {
         <div className={styles.navlogo}>
           <Logo />
         </div>
-        {/* <div className={styles.navitems}> 
+        <div className={styles.navitems}> 
+          {/* <Navitem />
           <Navitem />
-          <Navitem />
-          <Navitem />
-        </div> */}
+          <Navitem /> */}
+        </div>
        
 
       </div>
