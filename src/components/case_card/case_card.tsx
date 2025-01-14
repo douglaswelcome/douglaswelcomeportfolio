@@ -1,6 +1,12 @@
 import styles from "@/components/case_card/case_card.module.scss";
 
-export default function CaseCard({ headline, tag, subheadline }) {
+interface CaseCardProps {
+  headline: string;
+  tag: string;
+  subheadline: string;
+}
+
+export default function CaseCard({ headline, tag, subheadline }: CaseCardProps) {
   return (
     <div className={styles.caseCard}>
       <div className={styles.caseCardLeft}>
@@ -18,4 +24,3 @@ export default function CaseCard({ headline, tag, subheadline }) {
     </div>
   );
 }
-3;

@@ -1,4 +1,4 @@
-import styles from "@/components/social_icon/social_icon.module.scss";
+// import styles from "@/components/social_icon/social_icon.module.scss";
 
 export default function SocialIcon() {
     return (

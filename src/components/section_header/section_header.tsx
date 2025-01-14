@@ -8,4 +8,4 @@ export default function SectionHeader() {
     </div>
   );
 }
-3;
+

@@ -1,4 +1,4 @@
-@use "_responsive" as *;
+@use "_response_mixins" as *;
 @use "_colors" as *;
 
 
@@ -70,7 +70,7 @@ h5 {
   text-transform:uppercase;
 
   @include breakpoint(w-med) {
-    font-size: calc(0.8rem + 0.9vw);
+    font-size: 1rem;
   }
 }
 

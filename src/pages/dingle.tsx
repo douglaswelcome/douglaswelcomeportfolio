@@ -13,6 +13,16 @@ export default function Test() {
         tag="Case Study"
         subheadline="Studying the effects of climate change and major world collisions and catastrophes with a flair for imagination."
         />
+        <CaseCard 
+        headline="Fraud Controls for SMB Banking" 
+        tag="Case Study"
+        subheadline="Studying the effects of climate change and major world collisions and catastrophes with a flair for imagination."
+        />
+        <CaseCard 
+        headline="Fraud Controls for SMB Banking" 
+        tag="Case Study"
+        subheadline="Studying the effects of climate change and major world collisions and catastrophes with a flair for imagination."
+        />
     </Layout>
 
 

@@ -1,10 +1,12 @@
-@use "src/styles/foundations/_responsive.scss" as *;
+@use "src/styles/foundations/_response_mixins.scss" as *;
 
 .footer {
     display: grid;
     grid-template-columns: auto auto;
     align-content: center;
     height: 56px;
+    margin-bottom: 3rem;
+    margin-top:3rem;
 
    @include breakpoint(w-sm){
       width:100%;

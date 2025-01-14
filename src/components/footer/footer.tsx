@@ -1,6 +1,6 @@
 import styles from "@/components/footer/footer.module.scss";
 import Logo from "@/components/logo";
-import SocialIcon from "@/components/social_icon/social_icon";
+// import SocialIcon from "@/components/social_icon/social_icon";
 import React from 'react';
 import getConfig from "next/config";
 
@@ -9,10 +9,10 @@ const { publicRuntimeConfig } = getConfig();
 
 export default function Navbar() {
   const currentYear = new Date().getFullYear();
-  const updateDate = "01.13.2025";
+  // const updateDate = "01.13.2025";
   const publishDate = new Date(publicRuntimeConfig.publishDate).toLocaleDateString();
   const buildVersion = publicRuntimeConfig.buildVersion;
-  const gitCommit = publicRuntimeConfig.gitCommit;
+  // const gitCommit = publicRuntimeConfig.gitCommit;
 
 
   return (
@@ -27,7 +27,7 @@ export default function Navbar() {
             <h6>Douglas Welcome</h6>
           </div>
           <div>
-            <h6>Copyright © {currentYear} Douglas Welcome • Updated {publishDate} • v.{buildVersion}</h6>
+            <h6>Copyright © {currentYear} • Updated {publishDate} • v.{buildVersion}</h6>
           </div>
         </div>
         <div className={styles.socialicons}>

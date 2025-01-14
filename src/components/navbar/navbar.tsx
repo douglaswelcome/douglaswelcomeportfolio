@@ -1,6 +1,6 @@
 import styles from "@/components/navbar/navbar.module.scss";
 import Logo from "@/components/logo";
-import Navitem from "@/components/navitem";
+// import Navitem from "@/components/navitem";
 
 export default function Navbar() {
     return (
