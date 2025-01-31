@@ -5,18 +5,38 @@
 
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-dm-sans: "DM Sans", "DM Sans Fallback", Arial, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0C0C0C;
-    --foreground: #ffffff;
-  }
+
+
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-brand: #4a5eff;
+  --color-hairline: #555555;
+  --color-label: #bbbbbb;
+  --color-bg1:#0c0c0c;
+  --color-bg2:#1a1a1a;
+  --color-text:#ffffff;
 }
+
+
+:root {
+  --background: var(--color-bg1);
+  --foreground: var(--color-white);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--color-bg1);
+    --foreground: var(--color-white);
+  }
+} */
 
 body {
   color: var(--foreground);
   background: var(--background);
 }
+
+

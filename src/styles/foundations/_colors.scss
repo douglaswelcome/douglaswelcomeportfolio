@@ -3,70 +3,15 @@
   //     @return red($hex), green($hex), blue($hex);
   //   }
 
-  $color-white: #ffffff;
-  $color-black: #000000;
-  $color-brand: #4a5eff;
-  $color-hairline: #555555;
-  $color-label: #bbbbbb;
-  $color-bg1: #0c0c0c;
-  $color-bg2: #1a1a1a;
-  $color-text: #ffffff;
+  $color-white: var(--color-white);
+  $color-black: var(--color-black);
+    $color-black-rgb:#{hexToRGB($color-black)};
+  $color-brand: var(--color-brand);
+  $color-hairline: var(--color-hairline);
+  $color-label:var(--color-label);
+  $color-bg1:var(--color-bg1);
+  $color-bg2: var(--color-bg2);
+  $color-text: var(--color-);
 
-  $color-charcoal-0: #0d0d11;
-  $color-charcoal-1: #17171c;
-  $color-charcoal-2: #22222a;
-  $color-charcoal-3: #30303b;
-  $color-charcoal-4: #40404f;
-  $color-charcoal-5: #787887;
-  $color-charcoal-6: #b3b3b9;
-  $color-charcoal-7: #d8d8da;
-  $color-charcoal-8: #f0f0f2;
-
-  .body_baby {
-    --color-white: #{$color-white};
-    // --color-white-rgb:#{hexToRGB($color-white)};
-
-    --color-black: #{$color-black};
-    // --color-black-rgb:#{hexToRGB($color-black)};
-
-    --color-brand: #{$color-brand};
-    // --color-brand-rgb:#{hexToRGB($color-brand)};
-
-    --color-hairline: #{$color-hairline};
-
-    --color-label: #{$color-label};
-
-    // --color-charcoal-0: #{$color-charcoal-0};
-    // --color-charcoal-0-rgb:#{hexToRGB($color-charcoal-0)};
-    // --color-charcoal-1: #{$color-charcoal-1};
-    // --color-charcoal-1-rgb:#{hexToRGB($color-charcoal-1)};
-    // --color-charcoal-2: #{$color-charcoal-2};
-    // --color-charcoal-2-rgb:#{hexToRGB($color-charcoal-2)};
-    // --color-charcoal-3: #{$color-charcoal-3};
-    // --color-charcoal-3-rgb:#{hexToRGB($color-charcoal-3)};
-    // --color-charcoal-4: #{$color-charcoal-4};
-    // --color-charcoal-4-rgb:#{hexToRGB($color-charcoal-4)};
-    // --color-charcoal-5: #{$color-charcoal-5};
-    // --color-charcoal-5-rgb:#{hexToRGB($color-charcoal-5)};
-    // --color-charcoal-6: #{$color-charcoal-6};
-    // --color-charcoal-6-rgb:#{hexToRGB($color-charcoal-6)};
-    // --color-charcoal-7: #{$color-charcoal-7};
-    // --color-charcoal-7-rgb:#{hexToRGB($color-charcoal-7)};
-    // --color-charcoal-8: #{$color-charcoal-8};
-    // --color-charcoal-8-rgb:#{hexToRGB($color-charcoal-8)};
-  }
-
-  //gradients
-  // $gradient-brand: #FFD332 0%, #FFFA0C 100%;
-  // $gradient-magenta-purple: #951DD9 0%, #C01FEB 31.25%, #FF22E9 100%;
-  // $gradient-green-blue: #00EDED 0%, #00EDDF 47.92%, #1DF18B 100%;
-  // $gradient-red-orange: #FD2222 0%, #FF9533 100%;
-  // $gradient-blue: #1CFCFC 0.01%, #2CB3FF 50%, #2792F4 100%;
-  // $gradient-pink-red: #FF3232 0%, #FF33AD 100%;
-  // $gradient-blue-purple: #79BDEC 0%, #806DF2 48.91%, #885AD3 99.27%;
-  // $gradient-green-yellow: #FFFA0C 40%, #BCF334 100%;
-
-  // :root {
-  //   --gradient-brand: #{$gradient-brand};
-  // }
+ 
 

@@ -7,7 +7,7 @@ export default function HomeHero() {
       <div className={styles.homeHeroText}>
         <h1 className="">Value driven design <br /> that resonates</h1>
         <h4>
-          Hi, my name is Douglas Welcome and I am a product designer with a
+          Hi, my name is <b>Douglas Welcome</b>. I am a product designer with a
           passion for brand, front-end web, and mobile app design.
         </h4>
       </div>

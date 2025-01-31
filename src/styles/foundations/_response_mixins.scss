@@ -1,21 +1,40 @@
-@use "_root" as *;
+:root {
 
-  @mixin breakpoint($width) {
-    @if $width==w-xsm {
-    } @else if $width==w-sm {
-      @media (max-width: $w-med) {
+  --xlg-page-width: 1312px;
+  --lg-page-width: 1070px;
+  --med-page-width: 800px;
+} 
+
+
+$w-xlg: 1440px; //1440 px and up
+$w-lg: 1134px; //1134px
+$w-med:816px; //816px
+$w-sm: 320px; //320px
+
+
+  // $width-xxxlg: 130em; //
+  // $width-xxlg: 110em; 
+
+
+  @mixin breakpoint($point) {
+    @if $point == w-xsm {
+      //don't do anything, we don't need this size
+    } 
+    @else if $point == w-sm {
+      @media (max-width: #{$w-med}) {
         @content;
       }
-    } @else if $width==w-med {
-      @media (max-width: $w-lg) {
+    } 
+    @else if $point == w-med {
+      @media (max-width: #{$w-lg}) { 
         @content;
-      }
-    } @else if $width==w-lg {
-      @media (max-width: $w-xlg) {
+       }
+    } @else if $point==w-lg {
+      @media (max-width: #{$w-xlg}) { 
         @content;
-      }
-    } @else if $width==w-xlg {
-      @media (min-width: $w-xlg) {
+       }
+    } @else if $point==w-xlg {
+      @media (min-width: calc(#{$w-xlg} + 1px)) { 
         @content;
       }
     } @else {

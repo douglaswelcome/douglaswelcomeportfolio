@@ -17,10 +17,20 @@ module.exports = {
 
 const nextConfig: NextConfig = {
   /* config options here */
-
+  sassOptions: {
+    includePaths: ['./base'],
+  },
+  reactStrictMode: true,
+  images: {
+    dangerouslyAllowSVG: true,
+    contentDispositionType: "attachment",
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
 
 };
 
 export default nextConfig;
+
+
 
 

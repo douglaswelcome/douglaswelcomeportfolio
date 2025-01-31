@@ -1,5 +1,7 @@
+"use client"
+
 import styles from "@/components/footer/footer.module.scss";
-import Logo from "@/components/logo";
+import Icon from "@/components/svg_icon/svg_icon";
 // import SocialIcon from "@/components/social_icon/social_icon";
 import React from 'react';
 import getConfig from "next/config";
@@ -20,9 +22,9 @@ export default function Navbar() {
       <div className={`page-width ${styles.footer}`}>
         <div className={styles.footer_left}>
           <div className={styles.left_top}>
-            <h6>Designed and devloped by</h6>
+            <h6>Design and code by</h6>
             <div className={styles.footer_logo}>
-              <Logo />
+             <Icon path="./icons/dwlogo.svg"  height={16} fill="var(--foreground)" />
             </div>
             <h6>Douglas Welcome</h6>
           </div>
