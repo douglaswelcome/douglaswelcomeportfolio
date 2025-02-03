@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react"
+import { useState, useCallback } from "react"
 import SvgIcon from "@/components/svg_icon/svg_icon"
 import Link from "next/link"
 import styles from "@/components/cta/cta.module.scss"
@@ -10,28 +10,36 @@ interface CtaProps {
 }
 
 export default function Cta({ href, copy, iconClassName }: CtaProps) {
-  const [iconState, setIconState] = useState<"default" | "hover" | "active">("default")
+  const [isHovered, setIsHovered] = useState(false)
+  const [isActive, setIsActive] = useState(false)
 
-  const handleMouseEnter = useCallback(() => setIconState("hover"), [])
-  const handleMouseLeave = useCallback(() => setIconState("default"), [])
-  const handleMouseDown = useCallback(() => setIconState("active"), [])
-  const handleMouseUp = useCallback(() => setIconState("hover"), [])
+  const handleMouseEnter = useCallback(() => setIsHovered(true), [])
+  const handleMouseLeave = useCallback(() => {
+    setIsHovered(false)
+    setIsActive(false)
+  }, [])
+  const handleMouseDown = useCallback(() => setIsActive(true), [])
+  const handleMouseUp = useCallback(() => {
+    setIsActive(false)
+    setIsHovered(true)
+  }, [])
 
   const getIconColor = () => {
-    switch (iconState) {
-      case "hover":
-        return "var(--color-label)"
-      case "active":
-        return "var(--color-brand)"
-      default:
-        return "var(--foreground)"
+    if (isActive) {
+      return "var(--color-brand)"
     }
+    if (isHovered) {
+      return "var(--color-label)"
+    }
+    return "var(--foreground)"
   }
 
   return (
     <Link
       href={href}
-      className={`inline-flex flex-row items-center gap-1 ${styles.cta}`}
+      className={`inline-flex flex-row items-center gap-1 ${styles.cta} ${isHovered ? styles.hovered : ""} ${
+        isActive ? styles.active : ""
+      }`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onMouseDown={handleMouseDown}
@@ -39,7 +47,7 @@ export default function Cta({ href, copy, iconClassName }: CtaProps) {
     >
       <p>{copy}</p>
       <SvgIcon
-        path="./icons/arrow.svg"
+        path="arrow.svg"
         height={24}
         width={24}
         className={`${styles.icon} ${iconClassName || ""}`}

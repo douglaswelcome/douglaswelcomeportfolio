@@ -5,12 +5,13 @@ import CaseCard from "@/components/case_card/case_card";
 import Contact from "@/components/contact/contact";
 import { BluevineLogo } from "@/components/logos/bluevine";
 import { MekanoidLogo } from "@/components/logos/mekanoid";
+import { TestimonialCarousel } from "@/components/carousel/carousel";
 
 export default function Test() {
   return (
     <Layout>
       <HomeHero />
-      <SectionHeader />
+      <SectionHeader tag="Work" headline="Selected Cases" />
       <CaseCard
         headline="Fraud Controls for SMB Banking"
         tag="Case Study"
@@ -19,10 +20,10 @@ export default function Test() {
         ctaCopy="View Case Study"
         cardHref="https://www.slapkirk.com"
         cardImg={{
-          imgsrc:"/screenshots/achfraud_accounts.png",
+          imgsrc: "/screenshots/achfraud_accounts.png",
           imgalt: "Screenshot of Fraud Controls for SMB Banking",
-          imgWidth:1440,
-          imgHeight:1005
+          imgWidth: 1440,
+          imgHeight: 1005,
         }}
       />
 
@@ -34,10 +35,10 @@ export default function Test() {
         ctaCopy="View Case Study"
         cardHref="https://www.slapkirk.com"
         cardImg={{
-          imgsrc:"/screenshots/achfraud_accounts.png",
+          imgsrc: "/screenshots/achfraud_accounts.png",
           imgalt: "Screenshot of Fraud Controls for SMB Banking",
-          imgWidth:1440,
-          imgHeight:1005
+          imgWidth: 1440,
+          imgHeight: 1005,
         }}
       />
 
@@ -47,14 +48,17 @@ export default function Test() {
         subheadline="Example Subheadline"
         LogoComponent={BluevineLogo}
         ctaCopy="View Case Study"
-        cardHref="https://www.slapkirk.com"
+        cardHref="debit_cards_for_employees"
         cardImg={{
-          imgsrc:"/screenshots/achfraud_accounts.png",
+          imgsrc: "/screenshots/achfraud_accounts.png",
           imgalt: "Screenshot of Fraud Controls for SMB Banking",
-          imgWidth:1440,
-          imgHeight:1005
+          imgWidth: 1440,
+          imgHeight: 1005,
         }}
       />
+
+      <SectionHeader tag="Recommendations" headline="Colleague and Client Reviews" />
+      <TestimonialCarousel />
       <Contact />
     </Layout>
   );

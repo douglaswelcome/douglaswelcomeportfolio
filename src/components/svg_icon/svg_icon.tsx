@@ -1,35 +1,32 @@
-import { useState, useEffect } from "react"
+import { useEffect, useState } from "react"
 
-interface SvgIconProps {
+export interface SvgIconProps {
   width?: number
   height?: number
-  fill?: string
+  fill: string
   path: string
   className?: string
 }
 
-export default function SvgIcon({ width = 24, height = 24, fill = "currentColor", path, className }: SvgIconProps) {
+export default function SvgIcon({ width = 24, height = 24, fill, path, className }: SvgIconProps) {
   const [svgContent, setSvgContent] = useState<string>("")
 
   useEffect(() => {
-    fetch(path)
+    fetch(`/icons/${path}`)
       .then((response) => response.text())
       .then((svgText) => {
-        // Replace the fill attribute in the SVG content
-        const updatedSvgText = svgText.replace(/fill="[^"]*"/g, `fill="${fill}"`)
+        const updatedSvgText = svgText
+          .replace(/fill="white"/g, `fill="${fill}"`)
+          .replace("<svg", `<svg style="width: 100%; height: 100%;"`)
         setSvgContent(updatedSvgText)
       })
       .catch((error) => console.error("Error loading SVG:", error))
   }, [path, fill])
 
   return (
-    <div
-      style={{ width, height }}
-      dangerouslySetInnerHTML={{ __html: svgContent }}
-      role="img"
-      aria-label={`${path.split("/").pop()?.replace(".svg", "")} icon`}
-      className={className}
-    />
+    <div style={{ width, height }} className={className}>
+      <div dangerouslySetInnerHTML={{ __html: svgContent }} />
+    </div>
   )
 }
 

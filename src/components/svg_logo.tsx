@@ -2,36 +2,27 @@ import type React from "react"
 import { useMemo, useEffect, useState } from "react"
 
 interface SvgLogoProps {
-  width?: number
-  height?: number
   src: string
   alt: string
   fill?: string
 }
 
-export const SvgLogo: React.FC<SvgLogoProps> = ({ width, height, src, alt, fill }) => {
+export const SvgLogo: React.FC<SvgLogoProps> = ({ src, alt, fill }) => {
   const [svgContent, setSvgContent] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
-  const style = useMemo(() => {
-    const baseStyle: React.CSSProperties = {
+  const style = useMemo(
+    () => ({
       display: "inline-flex",
       alignItems: "center",
-      justifyContent: "flex-start", // Changed to left-align the content
+      justifyContent: "flex-start",
       overflow: "hidden",
-    }
-
-    if (width !== undefined && height !== undefined) {
-      return { ...baseStyle, width, height }
-    } else if (width !== undefined) {
-      return { ...baseStyle, width, height: "auto" }
-    } else if (height !== undefined) {
-      return { ...baseStyle, height, width: "auto" }
-    } else {
-      return { ...baseStyle, width: 24, height: 24 } // Default size
-    }
-  }, [width, height])
+      width: "100%",
+      height: "100%",
+    }),
+    [],
+  )
 
   useEffect(() => {
     setIsLoading(true)

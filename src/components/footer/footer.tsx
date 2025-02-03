@@ -24,7 +24,7 @@ export default function Navbar() {
           <div className={styles.left_top}>
             <h6>Design and code by</h6>
             <div className={styles.footer_logo}>
-             <Icon path="./icons/dwlogo.svg"  height={16} fill="var(--foreground)" />
+             <Icon path="dwlogo.svg"  height={16} fill="var(--foreground)" />
             </div>
             <h6>Douglas Welcome</h6>
           </div>

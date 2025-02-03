@@ -1,0 +1,17 @@
+.linkIcon {
+  cursor: pointer;
+  display: inline-block;
+
+  svg path {
+    transition: fill 300ms ease;
+  }
+
+  &:hover svg path {
+    fill: var(--color-label);
+  }
+
+  &:active svg path {
+    fill: var(--color-brand);
+  }
+}
+

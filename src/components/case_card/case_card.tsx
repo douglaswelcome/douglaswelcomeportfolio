@@ -3,20 +3,27 @@ import { useState } from "react"
 import Link from "next/link"
 import styles from "@/components/case_card/case_card.module.scss"
 import CtaNoLink from "@/components/cta_no_link/cta_no_link"
-import Image from 'next/image'
-
+import Image from "next/image"
 
 interface CaseCardProps {
   headline: string
   tag: string
   subheadline: string
-  LogoComponent: React.FC<{ height: number }>
+  LogoComponent: React.FC
   ctaCopy: string
   cardHref: string
-  cardImg: { imgsrc: string, imgalt: string, imgWidth:number, imgHeight:number }
+  cardImg: { imgsrc: string; imgalt: string; imgWidth: number; imgHeight: number }
 }
 
-export default function CaseCard({ headline, tag, subheadline, LogoComponent, ctaCopy, cardHref, cardImg }: CaseCardProps) {
+export default function CaseCard({
+  headline,
+  tag,
+  subheadline,
+  LogoComponent,
+  ctaCopy,
+  cardHref,
+  cardImg,
+}: CaseCardProps) {
   const [isHovered, setIsHovered] = useState(false)
   const [isActive, setIsActive] = useState(false)
 
@@ -39,7 +46,9 @@ export default function CaseCard({ headline, tag, subheadline, LogoComponent, ct
         </div>
         <p className="label_text">{subheadline}</p>
         <div className="mt-[2rem]">
-          <LogoComponent height={32} />
+          <div className={styles.logo_wrapper}>
+            <LogoComponent />
+          </div>
         </div>
         <div className={styles.cta_wrapper}>
           <CtaNoLink copy={ctaCopy} isHovered={isHovered} isActive={isActive} />
@@ -47,14 +56,13 @@ export default function CaseCard({ headline, tag, subheadline, LogoComponent, ct
       </div>
       <div className={styles.right}>
         <div className={styles.right_img}>
-        <Image 
-          src={cardImg.imgsrc} 
-          alt={cardImg.imgalt} 
-          width={cardImg.imgWidth} 
-          height={cardImg.imgHeight}
+          <Image
+            src={cardImg.imgsrc || "/placeholder.svg"}
+            alt={cardImg.imgalt}
+            width={cardImg.imgWidth}
+            height={cardImg.imgHeight}
           />
         </div>
-        
       </div>
     </Link>
   )

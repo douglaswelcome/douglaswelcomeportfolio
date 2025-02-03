@@ -28,7 +28,7 @@ export default function Cta({ copy, iconClassName, isHovered = false, isActive =
     >
       <p>{copy}</p>
       <SvgIcon
-        path="./icons/arrow.svg"
+        path="arrow.svg"
         height={24}
         width={24}
         className={`${styles.icon} ${iconClassName || ""}`}

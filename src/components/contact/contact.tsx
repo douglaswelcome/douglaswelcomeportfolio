@@ -4,7 +4,7 @@ import styles from "@/components/contact/contact.module.scss";
 
 export default function FullWidthPage() {
   return (
-    <div className=" w-full flex flex-col items-center justify-center py-32 relative">
+    <div className=" w-full flex flex-col items-center justify-center py-32 relative mt-32 mb-16">
       <div className={styles.circle_container}>
       <div className={styles.circle1} />
       <div className={styles.circle2} />
@@ -15,7 +15,7 @@ export default function FullWidthPage() {
         </h2>
         <div className="flex items-center justify-center space-x-2">
           <div className="flex items-center justify-center">
-            <Icon path="./icons/mail.svg" width={24} height={24} fill="var(--foreground)" />
+            <Icon path="mail.svg" width={24} height={24} fill="var(--foreground)" />
           </div>
           <Link
             href="mailto:hello@douglaswelcome.com"

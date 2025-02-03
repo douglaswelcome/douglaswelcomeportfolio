@@ -1,0 +1,47 @@
+.carouselWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+  }
+  
+  .carousel {
+    padding-top:1rem;
+    padding-bottom:1.5rem;
+  }
+
+  
+  .carouselTrack {
+    display: inline-flex;
+  }
+  
+  .carouselItem {
+    width: 400px;
+    flex-shrink: 0;
+    padding: 0 8px;
+  }
+  
+  .gradientOverlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 8rem;
+    pointer-events: none;
+  }
+  
+  .leftGradient {
+    left: 0;
+    background: linear-gradient(to right, var(--background), transparent);
+  }
+  
+  .rightGradient {
+    right: 0;
+    background: linear-gradient(to left, var(--background), transparent);
+  }
+  
+  .carousel:active {
+    cursor: grabbing;
+  }
+  
+  

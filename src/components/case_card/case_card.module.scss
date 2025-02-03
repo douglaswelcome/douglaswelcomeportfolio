@@ -1,8 +1,8 @@
 @use "src/styles/foundations/_response_mixins.scss" as *;
 
 .caseCard{
-  border: solid var(--color-hairline);
-  border-radius:1rem;
+  border: var(--border) ;
+  border-radius:var(--border-radius);
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 50% 50%;
@@ -15,6 +15,7 @@
   outline: 2px solid transparent;
   outline-offset: -2px;
   text-decoration: none;
+  box-shadow: var(--shadow);
 
   &:hover {
     h1, h2 {
@@ -25,8 +26,8 @@
   }
 
   &.hovered {
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    outline: 2px solid var(--color-brand);
+    box-shadow: var(--shadow-hover);
+    outline: var(--border-hover);
   }
 
   @include breakpoint(w-med) {
@@ -71,8 +72,12 @@
 }
 
 .right_img {
+  box-shadow: var(--shadow);
+  border: var(--border) ;
+  overflow:hidden;
+  border-radius:1rem;
   position:relative;
-  top:30%;
+  top: 38%;
   left:0;
   width:100%;
   rotate: -12deg;
@@ -83,7 +88,7 @@
   @include breakpoint(w-med) {
     scale: 1;
     translate: 1rem 0rem;
-    top:25%;
+    top:15%;
     transform-origin: top right;
   }
 
@@ -102,6 +107,7 @@
     rotate: -7deg;
     scale: 1.75;
     translate: 0rem -3rem;
+    box-shadow: var(--shadow-hover);
 
     @include breakpoint(w-med) {
     rotate: -4deg;
@@ -115,5 +121,21 @@
        translate: 7rem 0rem;
       }
 
+  }
+}
+
+.logo_wrapper {
+  height: 2rem; // Default height (32px)
+  width: auto;
+  display: flex;
+  align-items: center;
+
+  @include breakpoint(w-med) {
+    height: 1.5rem; // Smaller height for mobile (24px)
+  }
+
+  svg {
+    height: 100%;
+    width: auto;
   }
 }
