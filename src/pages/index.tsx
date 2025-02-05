@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import SvgIcon from "@/components/svg_icon/svg_icon";
+import Cta from "@/components/cta/cta";
 
 export const metadata: Metadata = {
   title: "Douglas Welcome Portfolio",
@@ -14,11 +15,15 @@ export default function Home() {
           <SvgIcon path="dwlogo.svg" height={24} width={32} fill="var(--foreground" />
         </div>
         <div className="text-sm text-center font-[family-name:var(--font-dm-sans)]">
-            <p>Portfolio for Douglas Welcome coming soon.</p>
+            <p>Full portfolio for Douglas Welcome coming soon.</p>
         </div>
         <div className="text-sm text-center font-[family-name:var(--font-dm-sans)]">
-            <p>Please email me at <a href="mailto:hello@douglaswelcome.com">hello@douglaswelcome.com</a> to get in touch and view work samples.</p>
+            <p>To get in touch, please email me at <a href="mailto:hello@douglaswelcome.com">hello@douglaswelcome.com</a> or take a look at some of <a href="/sample-of-work">my work</a>.</p>
         </div>
+        {/* <div className="pt-[1rem]">
+        <Cta copy="View Sample of Work" href="/sample-of-work" />
+        </div> */}
+
       </main>
     </div>
   );

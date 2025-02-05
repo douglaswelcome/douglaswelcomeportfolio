@@ -48,7 +48,7 @@ export default function Test() {
         subheadline="Example Subheadline"
         LogoComponent={BluevineLogo}
         ctaCopy="View Case Study"
-        cardHref="debit_cards_for_employees"
+        cardHref="debit-cards-for-employees"
         cardImg={{
           imgsrc: "/screenshots/achfraud_accounts.png",
           imgalt: "Screenshot of Fraud Controls for SMB Banking",
