@@ -1,6 +1,6 @@
-import Link from "next/link"
+
 import SvgIconLink from "@/components/svg_icon_link/svg_icon_link"
-import SvgIcon from "@/components/svg_icon/svg_icon"
+
 import styles from "@/components/navbar/navbar.module.scss"
 
 const Navbar = () => {
@@ -10,7 +10,7 @@ const Navbar = () => {
         <div className={styles.navlogo}>
         <SvgIconLink path="dwlogo.svg" width={30} height={20} url="/" />
         </div>
-        <ul className="flex space-x-6">
+        {/* <ul className="flex space-x-6">
           <li>
             <Link href="/" className="text-white hover:underline">
               Home
@@ -26,7 +26,7 @@ const Navbar = () => {
               Contact
             </Link>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </nav>
   )

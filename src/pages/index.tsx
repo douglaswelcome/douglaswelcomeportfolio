@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import SvgIcon from "@/components/svg_icon/svg_icon";
-import Cta from "@/components/cta/cta";
 
 export const metadata: Metadata = {
   title: "Douglas Welcome Portfolio",
