@@ -56,16 +56,17 @@ $w-sm: 320px; //320px
     }
 
     @include breakpoint(w-sm) {
-
       width: 100%;
       max-width: 40rem;
     }
+
+    
   }
 
   .page-width {
-    @include page-width;
     padding-left: 1rem;
     padding-right: 1rem;
+    @include page-width;
   }
 
   @mixin column-gap-12 {

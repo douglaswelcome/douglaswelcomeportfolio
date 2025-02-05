@@ -11,7 +11,7 @@ export interface Testimonial {
     {
       id: 1,
       name: "Herman Man",
-      jobTitle: "Chief Product Officer",
+      jobTitle: "CPO",
       company: "Bluevine",
       quote: "Douglas is a fabulous designer. He designs intuitive experiences that align with user needs and business goals. Douglas is an asset to any team.",
       image: "/headshots/herman_man.jpeg?height=100&width=100",
@@ -39,6 +39,14 @@ export interface Testimonial {
       company: "GD1 Ventures",
       quote: "For the past 4+ years Douglas has been my design partner. His ability has leveled up the cohesion of our entire brand, product, and employee experience. Douglas brings out the best in others and is a culture bearer. ",
       image: "/headshots/heather_gadonniex.jpeg?height=100&width=100",
+    },
+    {
+      id: 5,
+      name: "Tim Resudek",
+      jobTitle: "Senior Director of Design",
+      company: "Bluevine",
+      quote: "After meeting Douglas, I was so impressed with his aptitude that I made a position for him on my team. He's equal parts creative and pragmatic, and a pleasure to work with. Great attitude, owns his projects, and brings a unique viewpoint. 10/10, would hire again.",
+      image: "/headshots/tim_resudek.jpeg?height=100&width=100",
     },
   ]
   

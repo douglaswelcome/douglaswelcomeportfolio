@@ -17,6 +17,16 @@ module.exports = {
 
 const nextConfig: NextConfig = {
   /* config options here */
+  async redirects() {
+    return [
+      {
+        source: "/sample-of-work",
+        destination: "https://www.figma.com/proto/pyJPxIJWAJWyfjQ4Hguidz/DW-Case-Studies?page-id=161%3A3848&node-id=161-19339&viewport=-404%2C-330%2C0.46&t=gqFDLeLpY36Bjr7n-9&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=161%3A19339&show-proto-sidebar=1",
+        permanent: true,
+      },
+    ]
+  },
+
   sassOptions: {
     includePaths: ['./base'],
   },
