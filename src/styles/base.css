@@ -25,6 +25,10 @@
   --border: 1px solid var(--color-hairline);
   --border-hover: 2px solid var(--color-brand);
   --border-radius:1rem;
+
+  --xlg-page-width: 1312px;
+  --lg-page-width: 1070px;
+  --med-page-width: 800px;
 }
 
 /* @media (prefers-color-scheme: dark) {
