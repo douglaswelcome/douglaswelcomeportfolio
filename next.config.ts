@@ -18,6 +18,16 @@ const nextConfig = {
           "https://www.figma.com/proto/pyJPxIJWAJWyfjQ4Hguidz/DW-Case-Studies?page-id=161%3A3848&node-id=161-19339&viewport=-404%2C-330%2C0.46&t=gqFDLeLpY36Bjr7n-9&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=161%3A19339&show-proto-sidebar=1",
         permanent: true,
       },
+      {
+        source: "/case-study-debit-cards-for-employees",
+        destination:
+          "https://www.figma.com/proto/pyJPxIJWAJWyfjQ4Hguidz/Douglas-Welcome?page-id=178%3A14459&node-id=178-14490&viewport=1245%2C534%2C0.44&t=TKZaQps5azzzVnE4-9&scaling=min-zoom&content-scaling=fixed&show-proto-sidebar=1&starting-point-node-id=178%3A14490",
+        permanent: true,
+      },
+
+
+
+
     ]
   },
   sassOptions: {
