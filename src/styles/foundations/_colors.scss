@@ -1,0 +1,17 @@
+
+  // @function hexToRGB($hex) {
+  //     @return red($hex), green($hex), blue($hex);
+  //   }
+
+  $color-white: var(--color-white);
+  $color-black: var(--color-black);
+    $color-black-rgb:#{hexToRGB($color-black)};
+  $color-brand: var(--color-brand);
+  $color-hairline: var(--color-hairline);
+  $color-label:var(--color-label);
+  $color-bg1:var(--color-bg1);
+  $color-bg2: var(--color-bg2);
+  $color-text: var(--color-);
+
+ 
+

@@ -1,0 +1,27 @@
+@use "src/styles/foundations/_response_mixins.scss" as *;
+
+.navbar {
+    display: grid;
+    grid-template-columns: 48px auto;
+      align-content: center;
+    height: 56px;
+
+   @include breakpoint(w-sm){
+      width:100%;
+   } 
+   
+
+
+
+  }
+
+ .navitems {
+    display: flex;
+    align-items: flex-start;
+
+
+ } 
+
+ .navlogo{
+   width:2rem;
+ }
