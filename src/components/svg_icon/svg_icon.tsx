@@ -16,8 +16,9 @@ export default function SvgIcon({ width = 24, height = 24, fill, path, className
       .then((response) => response.text())
       .then((svgText) => {
         const updatedSvgText = svgText
-          .replace(/fill="white"/g, `fill="${fill}"`)
-          .replace("<svg", `<svg style="width: 100%; height: 100%;"`)
+          .replace(/fill="none"/g, "") // Remove fill="none" from root
+          .replace(/fill="white"/g, "") // Remove fill="white"
+          .replace("<svg", `<svg fill="${fill}" style="width: 100%; height: 100%;"`)
         setSvgContent(updatedSvgText)
       })
       .catch((error) => console.error("Error loading SVG:", error))

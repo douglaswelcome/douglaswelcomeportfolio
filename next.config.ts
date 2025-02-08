@@ -1,4 +1,4 @@
-const { execSync } = require("child_process")
+const { execSync } = require("child_process");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -24,10 +24,6 @@ const nextConfig = {
           "https://www.figma.com/proto/pyJPxIJWAJWyfjQ4Hguidz/Douglas-Welcome?page-id=178%3A14459&node-id=178-14490&viewport=1245%2C534%2C0.44&t=TKZaQps5azzzVnE4-9&scaling=min-zoom&content-scaling=fixed&show-proto-sidebar=1&starting-point-node-id=178%3A14490",
         permanent: true,
       },
-
-
-
-
     ]
   },
   sassOptions: {
