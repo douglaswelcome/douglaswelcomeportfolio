@@ -28,7 +28,7 @@ export default function Test() {
     <ul>
         <li>This Skill does not collect, store, or share personal data.</li>
         <li>The Skill may use third-party streaming services, which may have separate terms and privacy policies.</li>
-        <li>By using this Skill, you acknowledge and agree to the data policies outlined in our <a href="/highland-stereo-project/highland-stereo-privacy-policy">Privacy Policy</a>.</li>
+        <li>By using this Skill, you acknowledge and agree to the data policies outlined in our Privacy Policy.</li>
     </ul>
     
     <h4>5. Availability and Updates</h4>
@@ -46,7 +46,7 @@ export default function Test() {
     
     <h4>7. Disclaimers and Limitation of Liability</h4>
     <ul>
-        <li>The Skill is provided on an as is and "as available" basis.</li>
+        <li>The Skill is provided on an as is and as available basis.</li>
         <li>We do not guarantee uninterrupted service, error-free operation, or specific performance outcomes.</li>
         <li>To the fullest extent permitted by law, we disclaim any liability for direct, indirect, or consequential damages arising from the use or inability to use the Skill.</li>
     </ul>
