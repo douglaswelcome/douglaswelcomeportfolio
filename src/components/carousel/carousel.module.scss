@@ -1,3 +1,5 @@
+@use "src/styles/foundations/_response_mixins.scss" as *;
+
 .carouselWrapper {
     position: relative;
     width: 100%;
@@ -20,6 +22,10 @@
     width: 400px;
     flex-shrink: 0;
     padding: 0 8px;
+
+    @include breakpoint(w-sm){
+      width: 300px;
+    }
   }
   
   .gradientOverlay {
@@ -44,4 +50,12 @@
     cursor: grabbing;
   }
   
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .carousel {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
   

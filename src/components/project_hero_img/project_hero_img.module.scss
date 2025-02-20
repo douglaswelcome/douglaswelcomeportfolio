@@ -1,0 +1,30 @@
+@use "src/styles/foundations/_response_mixins.scss" as *;
+
+.projectHeroImg {
+    @extend %grid-12;
+    margin-bottom: 3rem;
+} 
+
+.projectHeroImgContainer {
+    grid-column-start: 2;
+    grid-column-end: span 10;
+    position:relative;
+    @include breakpoint (w-sm) {
+
+    }
+}
+
+.bottomGradient {
+    bottom: 0;
+    position:absolute;
+    height: 6rem;
+    width:100%;
+    background: linear-gradient(to top, var(--background), transparent);
+  }
+  
+
+
+.projectHeroImgFile {
+    border: var(--border) ;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}

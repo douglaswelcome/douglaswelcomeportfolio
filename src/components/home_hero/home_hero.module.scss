@@ -39,7 +39,7 @@
 }
 
 .homeImageContainer {
-  height: 90%;
+  height: 85%;
   width: 85%;
   position: absolute;
   bottom: 0;
@@ -72,6 +72,7 @@
   @include breakpoint(w-sm) {
   position:relative;
   margin-left:auto;
+  width: 85%;
   }
 }
 .circle {
@@ -90,6 +91,11 @@
       height: 7rem;
       width:7rem;
 
+    }
+
+    @include breakpoint(w-sm){
+      bottom:1rem;
+      right: 0rem;
     }
 
 
@@ -114,9 +120,18 @@
       bottom: 1rem;
       height:55vw;
       width:55vw;
-      max-height:18rem;
-      max-width:18rem;
+      max-height:17rem;
+      max-width:17rem;
 
+    }
+
+    @include breakpoint(w-sm){
+      right:60%;
+
+      height:55vw;
+      width:55vw;
+      max-height:12rem;
+      max-width:12rem;
     }
 
   }
@@ -138,6 +153,16 @@
       max-height:12rem;
       max-width:12rem;
 
+    }
+
+    @include breakpoint(w-sm){
+      right:3rem;
+      bottom:unset;
+      top:0rem;
+      height:38vw;
+      width:38vw;
+      max-height:10rem;
+      max-width:10rem;
     }
 
   }
