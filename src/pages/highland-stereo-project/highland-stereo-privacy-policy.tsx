@@ -8,7 +8,7 @@ export default function Test() {
   return (
     <Layout>
       <div>
-      <h3>Privacy Policy for Highland Stereo Skill</h3>
+      <h1>Privacy Policy for Highland Stereo Skill</h1>
       <p><strong>Effective Date:</strong> 2025-2-20</p>
 
       <p>Welcome to the Highland Stereo Alexa Skill (“Skill”). Your privacy is important to us, and we are committed to protecting any information you provide while using this Skill.</p>
