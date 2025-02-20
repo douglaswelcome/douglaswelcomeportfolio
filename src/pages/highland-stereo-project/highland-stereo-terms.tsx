@@ -12,10 +12,10 @@ export default function Test() {
     <p><strong>Effective Date:</strong> 2025-2-20</p>
     
     <h4>1. Introduction</h4>
-    <p>Welcome to the Highland Stereo Alexa Skill ("Skill"). By enabling or using this Skill, you agree to be bound by these Terms of Use ("Terms"). If you do not agree with these Terms, do not use the Skill.</p>
+    <p>Welcome to the Highland Stereo Alexa Skill (Skill). By enabling or using this Skill, you agree to be bound by these Terms of Use (Terms). If you do not agree with these Terms, do not use the Skill.</p>
     
     <h4>2. Description of the Skill</h4>
-    <p>The Highland Stereo Skill allows users to stream audio content from Highland Stereo using Alexa-enabled devices. This Skill is provided "as is" and does not require user registration or personal data collection.</p>
+    <p>The Highland Stereo Skill allows users to stream audio content from Highland Stereo using Alexa-enabled devices. This Skill is provided as is and does not require user registration or personal data collection.</p>
     
     <h4>3. User Responsibilities</h4>
     <ul>
@@ -46,7 +46,7 @@ export default function Test() {
     
     <h4>7. Disclaimers and Limitation of Liability</h4>
     <ul>
-        <li>The Skill is provided on an "as is" and "as available" basis.</li>
+        <li>The Skill is provided on an as is and "as available" basis.</li>
         <li>We do not guarantee uninterrupted service, error-free operation, or specific performance outcomes.</li>
         <li>To the fullest extent permitted by law, we disclaim any liability for direct, indirect, or consequential damages arising from the use or inability to use the Skill.</li>
     </ul>
