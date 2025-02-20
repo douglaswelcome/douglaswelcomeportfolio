@@ -1,9 +1,10 @@
 import Cta from "@/components/cta/cta"
+import styles from "@/components/project_hero/project_hero.module.scss"
 
 export interface CaseStudyCardProps {
   label?: string
   title: string
-  description: string
+  description?: string
   ctaText?: string
   ctaHref?: string
 }
@@ -16,7 +17,7 @@ export default function ProjectHero({
   ctaHref = "#",
 }: CaseStudyCardProps) {
   return (
-    <div className=" flex flex-col justify-end p-8 md:p-12 lg:p-16">
+    <div className={styles.hero}>
       <div className="space-y-6">
         <h5 className="">{label}</h5>
 
