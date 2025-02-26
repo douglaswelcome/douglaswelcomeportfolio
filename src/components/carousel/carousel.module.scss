@@ -5,10 +5,12 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-
+    overflow: hidden;
   }
   
   .carousel {
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
     padding-top:1rem;
     padding-bottom:1.5rem;
   }
@@ -16,12 +18,27 @@
   
   .carouselTrack {
     display: inline-flex;
+    animation: scroll 30s linear infinite;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
   
   .carouselItem {
     width: 400px;
     flex-shrink: 0;
     padding: 0 8px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  
 
     @include breakpoint(w-sm){
       width: 300px;
