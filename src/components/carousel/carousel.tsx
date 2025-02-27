@@ -4,7 +4,7 @@ import * as React from "react"
 import { testimonials } from "@/data/testimonials"
 import { TestimonialCard } from "@/components/card_carousel/card_carousel"
 import styles from "@/components/carousel/carousel.module.scss"
-import { useCallback, useRef } from "react"
+
 
 export function TestimonialCarousel() {
   const [isDragging, setIsDragging] = React.useState(false)
