@@ -19,6 +19,7 @@ export function TestimonialCarousel() {
 
     const resetAnimation = () => {
       carouselTrack.style.animation = "none"
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       carouselTrack.offsetHeight // Trigger reflow
       carouselTrack.style.animation = ''
     }
