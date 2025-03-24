@@ -17,6 +17,10 @@
   text-decoration: none;
   box-shadow: var(--shadow);
 
+  &::after {
+    content: none;
+  }
+
   &:hover {
     h1, h2 {
       color: var(--foreground);

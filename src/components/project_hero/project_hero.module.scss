@@ -1,8 +1,13 @@
-// @use "src/styles/foundations/_responsive.scss" as *;
+@use "src/styles/foundations/_response_mixins.scss" as *;
 // @use "src/styles/foundations/_colors.scss" as *;
 
 .hero{
   padding-top: 3rem;
   padding-bottom: 3rem;
+  @extend %grid-12;
+}
+
+.heroInner{
+  grid-column-end: span 9;
 }
 

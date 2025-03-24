@@ -12,13 +12,17 @@
     color: var(--color-brand);
   }
 
-
+  &::after {
+    content: none;
+   }
 
   
 }
 
+
+// Update the icon class to ensure proper color inheritance
 .icon {
-  transition: fill 0.3s ease, stroke 0.3s ease, transform 0.3s ease;
+  transition: fill 0.1s ease, stroke 0.1s ease, transform 0.3s ease;
   fill: currentColor;
 
   :global(svg) {
@@ -29,16 +33,23 @@
   :global(path),
   :global(circle),
   :global(rect) {
-    transition: fill 0.3s ease, stroke 0.3s ease;
     fill: inherit;
+    transition: fill 0.1s ease;
   }
 }
 
-.cta.hovered .icon {
-  transform: translateX(4px);
+// Add these new classes for different states
+.default .icon {
+  fill: var(--foreground);
 }
 
-.cta.active .icon {
-  transform: translateX(2px);
+.hovered .icon {
+  fill: var(--color-brand);
+   transform: translateX(4px);
+}
+
+.active .icon {
+  fill: var(--color-brand);
+    transform: translateX(2px);
 }
 

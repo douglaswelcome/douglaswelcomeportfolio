@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 export interface SvgIconProps {
   width?: number
   height?: number
-  fill: string
+  fill?: string
   path: string
   className?: string
 }

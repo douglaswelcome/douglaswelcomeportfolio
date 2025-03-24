@@ -2,12 +2,16 @@
   cursor: pointer;
   display: inline-block;
 
+  &::after {
+    content: none;
+  }
+
   svg path {
-    transition: fill 300ms ease;
+    transition: fill 1500ms ease;
   }
 
   &:hover svg path {
-    fill: var(--color-label);
+    fill: var(--color-brand);
   }
 
   &:active svg path {

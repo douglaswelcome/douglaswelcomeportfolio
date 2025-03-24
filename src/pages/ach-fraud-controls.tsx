@@ -9,7 +9,9 @@ import Testimonial from "@/components/testimonial_card/testimonial_card";
 export default function Test() {
   return (
     <Layout>
-      <ProjectHero title="ACH Fraud Controls" description="This is some content about what the hell this project is. Take it all with a grain of salt. Or don't. The choice is yours." />
+      <ProjectHero title="ACH Fraud Controls" 
+          description="Empowering business owners with simple tools to block unauthorized ACH transactions and protect their accounts." 
+          ctaHref="https://support.bluevine.com/s/article/How-do-I-manage-my-ACH-debit-controls#:~:text=Once%20configured%2C%20Bluevine%20business%20bank,avoid%20declined%20payments%20or%20disputes." />
       <ProjectHeroImg 
       src="/screenshots/achfraud_accounts.png"
       alt="Screenshot of ACH Fraud Controls">
