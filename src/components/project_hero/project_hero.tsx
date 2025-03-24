@@ -18,14 +18,14 @@ export default function ProjectHero({
 }: CaseStudyCardProps) {
   return (
     <div className={styles.hero}>
-      <div className="space-y-6">
+      <div className={`${styles.heroInner} space-y-6`}>
         <h5 className="">{label}</h5>
 
         <h1 className="">{title}</h1>
 
         <h2 className="label_text">{description}</h2>
 
-        <Cta href={ctaHref} copy={ctaText} />
+        <Cta href={ctaHref} copy={ctaText} target="_blank" />
       </div>
     </div>
   )

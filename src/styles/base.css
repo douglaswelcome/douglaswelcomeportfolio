@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 :root {
   --font-dm-sans: "DM Sans", "DM Sans Fallback", Arial, sans-serif;
 
@@ -37,6 +35,10 @@
     --foreground: var(--color-white);
   }
 } */
+
+html {
+  interpolate-size: allow-keywords;
+}
 
 body {
   color: var(--foreground);

@@ -15,7 +15,7 @@ export default function Cta({ copy, iconClassName, isHovered = false, isActive =
       return "var(--color-brand)"
     }
     if (isHovered) {
-      return "var(--color-label)"
+      return "var(--color-brand)"
     }
     return "var(--foreground)"
   }
