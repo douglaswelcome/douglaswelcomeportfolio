@@ -48,7 +48,7 @@ a {
 
 p {
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 200;
 }
 
 
@@ -58,6 +58,34 @@ b {
 
 .label_text {
   color:var(--color-label);
+}
+
+.display1{
+  font-size: 6.5rem;
+  font-weight: 200;
+  line-height: 1.25;
+
+  @include breakpoint(w-lg) {
+    font-size: 5rem;
+  }
+
+  @include breakpoint(w-med) {
+    font-size: calc(3rem + 1.75vw);
+  }
+}
+
+.display2{
+  font-size: 5rem;
+  font-weight: 200;
+  line-height: 1.75;
+
+  @include breakpoint(w-lg) {
+    font-size: 6.5rem;
+  }
+
+  @include breakpoint(w-med) {
+    font-size: calc(3rem + 1.75vw);
+  }
 }
 
 h1 {
@@ -98,7 +126,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 200;
   line-height: 1.75rem;
 

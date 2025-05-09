@@ -18,7 +18,7 @@ export default function Test() {
         subheadline="ACH fraud controls for small businesses include transaction limits and dual authorization to prevent unauthorized transfers."
         LogoComponent={BluevineLogo}
         ctaCopy="View Case Study"
-        cardHref="ach-fraud-controls"
+        cardHref="fraud-controls"
         cardImg={{
           imgsrc: "/screenshots/achfraud_accounts.png",
           imgalt: "Screenshot of Fraud Controls for SMB Banking",

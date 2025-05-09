@@ -11,23 +11,12 @@
     overflow: hidden;
 }
 
-.quote {
+.body {
   color: var(--foreground);
+  margin-top: 1rem;
 }
 
-.footer {
-  padding-top: 1rem;
+.cardCount {
+  color:var(--color-brand)
 }
 
-.image {
-  border: var(--border);
-}
-
-.name {
-  color: var(--color-default);
-}
-
-.jobTitle,
-.company {
-  color: var(--color-label);
-}

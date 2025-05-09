@@ -103,9 +103,7 @@ $w-sm: 320px; //320px
     @include column-gap-6;
   }
 
-  .grid-wrapper {
-    @extend %grid-12;
-  }
+
 
   @mixin small-pad() {
     @include breakpoint(w-sm) {
@@ -135,3 +133,10 @@ $w-sm: 320px; //320px
     justify-content: center;
   }
 
+  .gridWrapper {
+    @extend %grid-12;
+  }
+  .caseSection{
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+  }
