@@ -1,11 +1,15 @@
 // @use "src/styles/foundations/_response_mixins.scss" as *;
 // @use "src/styles/foundations/_colors.scss" as *;
 
-.wideListItem{
+.wideListItem {
   border-bottom: solid 1px var(--color-hairline);
   padding-bottom: 3rem;
+
+  &.noBorder {
+    border-bottom: none;
+  }
 }
 
 .count {
-  color:var(--color-brand)
+  color: var(--color-brand);
 }

@@ -1,0 +1,45 @@
+.card {
+  box-shadow: var(--shadow);
+  background-color: var(--color-bg2);
+  border: var(--border);
+  border-radius: 1rem;
+}
+
+.cardContent {
+  overflow: hidden;
+}
+
+.body {
+  color: var(--foreground);
+  line-height: 1.5;
+}
+
+// Text styling classes
+.highlight {
+  color: var(--color-brand);
+  font-weight: 600;
+}
+
+.highlightBg {
+  background-color: var(--color-brand);
+  color: white;
+  font-weight: 700;
+  padding: 0rem .25rem
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.cardCount {
+  color: var(--color-brand);
+}
+

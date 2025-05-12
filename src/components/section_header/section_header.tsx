@@ -2,7 +2,7 @@ import styles from "@/components/section_header/section_header.module.scss";
 
 interface SectionHeaderProps {
   tag?: string
-  headline: string
+  headline?: string
   subheadline?: string
   
 }

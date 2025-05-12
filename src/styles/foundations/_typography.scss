@@ -91,7 +91,7 @@ b {
 h1 {
   font-size: 4rem;
   font-weight: 200;
-  line-height: 1;
+  line-height: 1.25;
 
   @include breakpoint(w-lg) {
     font-size: 3rem;
@@ -150,7 +150,7 @@ h5 {
 
 h6 {
   //used for menus
-  font-size: .75rem;
+  font-size: 0.875rem;
   font-weight: 200;
   line-height: 1.25rem;
 }

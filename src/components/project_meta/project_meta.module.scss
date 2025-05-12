@@ -1,0 +1,35 @@
+.metaWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2.5rem;
+}
+
+.metaCol {
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+}
+
+.metaLabel {
+  color: #4B6AFF;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+}
+
+.metaValue {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  white-space: pre-line;
+}
+
+.divider {
+  width: 1px;
+  background: rgba(255,255,255,0.2);
+  height: 48px;
+  align-self: center;
+} 

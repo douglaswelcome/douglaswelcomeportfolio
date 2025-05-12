@@ -6,7 +6,9 @@ import Testimonial from "@/components/testimonial_card/testimonial_card";
 import SectionHeader from "@/components/section_header/section_header";
 import SimpleCard from "@/components/simple_card/simple_card";
 import WideListItem from "@/components/wide_list_item/wide_list_item";
-
+import StatementCard from "@/components/statement_card/statement_card";
+import styles from "@/components/statement_card/statement_card.module.scss";
+import SimpleImg from "@/components/simple_img/simple_img";
 export default function Test() {
   return (
     <Layout>
@@ -27,25 +29,26 @@ export default function Test() {
         />
         <div className="gridWrapper mt-6">
           <div className="col-start-2 col-span-10 flex flex-col gap-12">
-           <WideListItem
-              headline="Define the task"
+            <WideListItem
+              headline="Identify the Problem and the Opportunity"
               count="1."
               subheadline='Ask ourselves "How might we create ACH debit controls that are dead-simple to use, quick to setup, and provide the level of control and security required by business owners?" '
             />
             <WideListItem
               headline="Research and Interview"
               count="2."
-              subheadline="Interview business owners to understand their day-to-day experience with ACH debits and fraud protection and resolution."
+              subheadline="Compare competitors' experience and interview business owners to understand their day-to-day experience with ACH debits, fraud protection and resolution."
             />
             <WideListItem
               headline="Explore and Iterate"
               count="3."
-              subheadline="Iterate on possible UX approaches and test these with stakeholders and customers."
+              subheadline="Iterate on possible design approaches and test these with stakeholders and customers."
             />
             <WideListItem
-              headline="Refine and Ship"
+              headline="Ship and Evaluate"
               count="4."
-              subheadline="Refine the fraud control experience and collaborate with R&D to develop, validate, and ship feature suite."
+              subheadline="Refine the fraud control experience, collaborate with R&D to develop, validate, and ship feature suite, and evaluate the impact of the feature."
+              showBorder={false}
             />
           </div>
         </div>
@@ -53,8 +56,8 @@ export default function Test() {
 
       <div className="caseSection">
         <SectionHeader
-          headline="Identify the Problem"
-          subheadline="We identified three primary pain points for both Bluevine’s business and customers when dealing with unauthorized ACH transactions."
+          headline="The Problem and Opportunity"
+          subheadline="We identified three primary pain points for both Bluevine's business and customers when dealing with unauthorized ACH transactions."
         />
         <div className="gridWrapper mt-6">
           <div className="col-start-2 col-span-10 flex flex-row gap-6">
@@ -74,25 +77,52 @@ export default function Test() {
               className="flex-1"
               count="3."
               headline="Customer Dissatisfaction"
-              body="The slow resolution process risked frustrating customers and damaging their trust in Bluevine’s security. Additionally, this is a feature offered by many business banking solutions."
+              body="The slow resolution process risked frustrating customers and damaging their trust in Bluevine's security. Additionally, this is a feature offered by many business banking solutions."
             ></SimpleCard>
           </div>
         </div>
+        <SectionHeader
+          subheadline="With the pain points identified, we outlined the opportunity to solve for through our design of the ACH fraud controls."
+        />
+        <div className="gridWrapper mt-6">
+          <StatementCard
+            className="col-start-2 col-span-10"
+            body={[
+              { text: "How might we create ACH debit controls that are " },
+              { text: "dead-simple", className: styles.highlightBg },
+              { text: " to use, " },
+              { text: "quick", className: styles.highlightBg },
+              { text: " to setup, and provide a level of " },
+              { text: "control and security", className: styles.highlightBg },
+              { text: " required by business owners." },
+            ]}
+          />
+        </div>
+
       </div>
 
       <div className="caseSection">
         <SectionHeader
-          headline="Identifying the Opportunity"
-          subheadline="With the pain points identified, we outlined the opportunity to solve for through our design of the ACH fraud controls."
+          headline="Research and Interviews"
+          subheadline="We took an initial inventory of our assumed user needs and explored various ways of structuring these within the platform. We then interviewed small business owners to gain deeper insights and test if our proposed feature set aligned with their expectations."
         />
+        <div className="gridWrapper mt-6">
+          <div className="col-start-2 col-span-10 flex flex-row gap-6">
+            <SimpleImg
+              src="/ach-fraud/feature_set.png"
+              alt="Screenshot of ACH Fraud Controls"
+              caption="Collecting and outlining possible feature set and architecture based on our assumptions for user expectations and accessibility."
+            />
+          </div>
+        </div>
       </div>
 
-      <Testimonial
+      {/* <Testimonial
         imageSrc="/headshots/william_levinson.jpeg"
         name="William Levinson"
         jobTitle="Product at Bluevine"
         quote="Douglas is an exceptional product designer whose work consistently exemplifies a deep commitment to customer-centric design. I wholeheartedly recommend Douglas to any design team looking to their team to the next level."
-      />
+      /> */}
       <Contact />
     </Layout>
   );
