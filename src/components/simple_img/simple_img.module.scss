@@ -1,8 +1,65 @@
+@use "src/styles/foundations/_response_mixins.scss" as *;
+
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2rem 0;
+    gap: 2rem;
+}
+
+.oneSmall {
+    grid-column: 3 / span 8;
+
+    @include breakpoint(w-med) {
+        grid-column: 3 / span 8;
+    }  
+
+    @include breakpoint(w-sm) {
+        grid-column: 1 / span 12;
+    }
+}
+
+.oneLarge {
+    grid-column: 1 / span 12;
+}
+
+.twoSmall {
+    grid-column: 3 / span 8;
+
+
+
+    @include breakpoint(w-med) {
+        grid-column: 1 / span 12;
+    }
+    
+    
+}
+
+.twoLarge {
+    grid-column: 1 / span 12;
+}
+
+.wrapperRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;         // <-- Make it fill the parent
+  align-self: stretch; // <-- Helps in grid layouts
+
+  @include breakpoint(w-med) {
+    flex-direction: column;
+    gap: 1.5rem;
+    }
+
+}
+
+.imgCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 0;
 }
 
 .img {
@@ -14,5 +71,4 @@
 
 .caption {
   text-align: center;
-  padding:1rem;
-} 
+}

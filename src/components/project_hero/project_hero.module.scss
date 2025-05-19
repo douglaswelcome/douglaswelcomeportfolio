@@ -8,6 +8,9 @@
 }
 
 .heroInner{
-  grid-column-end: span 9;
+  grid-column-end: span 8;
+  @include breakpoint (w-sm) {
+    grid-column-end: span 12;
+  }
 }
 

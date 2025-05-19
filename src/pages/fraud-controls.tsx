@@ -9,6 +9,8 @@ import WideListItem from "@/components/wide_list_item/wide_list_item";
 import StatementCard from "@/components/statement_card/statement_card";
 import styles from "@/components/statement_card/statement_card.module.scss";
 import SimpleImg from "@/components/simple_img/simple_img";
+import ProjectMeta from "@/components/project_meta/project_meta";
+
 export default function Test() {
   return (
     <Layout>
@@ -21,6 +23,11 @@ export default function Test() {
         src="/screenshots/achfraud_accounts.png"
         alt="Screenshot of ACH Fraud Controls"
       ></ProjectHeroImg>
+      <ProjectMeta
+        time="2024, 10 Weeks"
+        team="Product Manager, Product Designer, and R&D Tech Lead"
+        role="Researcher, designer, strategy and vision"
+      />
 
       <div className="caseSection">
         <SectionHeader
@@ -28,9 +35,9 @@ export default function Test() {
           subheadline="Bluevine is financial technology company building better banking solutions for growing businesses by providing the attention, funding and financial tools they deserve. With the aim is to offer industry-leading fintech platform with robust security, we were tasked with launching a suite of ACH fraud controls tools to empower business owners to maintain tighter control over who can draw funds from their accounts."
         />
         <div className="gridWrapper mt-6">
-          <div className="col-start-2 col-span-10 flex flex-col gap-12">
+
             <WideListItem
-              headline="Identify the Problem and the Opportunity"
+              headline="Identify Problem and Opportunity"
               count="1."
               subheadline='Ask ourselves "How might we create ACH debit controls that are dead-simple to use, quick to setup, and provide the level of control and security required by business owners?" '
             />
@@ -45,22 +52,21 @@ export default function Test() {
               subheadline="Iterate on possible design approaches and test these with stakeholders and customers."
             />
             <WideListItem
-              headline="Ship and Evaluate"
+              headline="Refine, Ship and Evaluate"
               count="4."
               subheadline="Refine the fraud control experience, collaborate with R&D to develop, validate, and ship feature suite, and evaluate the impact of the feature."
               showBorder={false}
             />
-          </div>
         </div>
       </div>
 
       <div className="caseSection">
         <SectionHeader
-          headline="The Problem and Opportunity"
+          headline="Problem and Opportunity"
           subheadline="We identified three primary pain points for both Bluevine's business and customers when dealing with unauthorized ACH transactions."
         />
         <div className="gridWrapper mt-6">
-          <div className="col-start-2 col-span-10 flex flex-row gap-6">
+          <div className="col-start-1 col-span-12 flex rowToColumn gap-8">
             <SimpleCard
               className="flex-1"
               count="1."
@@ -86,7 +92,7 @@ export default function Test() {
         />
         <div className="gridWrapper mt-6">
           <StatementCard
-            className="col-start-2 col-span-10"
+            className=""
             body={[
               { text: "How might we create ACH debit controls that are " },
               { text: "dead-simple", className: styles.highlightBg },
@@ -103,26 +109,86 @@ export default function Test() {
 
       <div className="caseSection">
         <SectionHeader
-          headline="Research and Interviews"
+          headline="Research and Interview"
           subheadline="We took an initial inventory of our assumed user needs and explored various ways of structuring these within the platform. We then interviewed small business owners to gain deeper insights and test if our proposed feature set aligned with their expectations."
         />
-        <div className="gridWrapper mt-6">
-          <div className="col-start-2 col-span-10 flex flex-row gap-6">
+        <div className="gridWrapper pb-8 pt-8">
             <SimpleImg
-              src="/ach-fraud/feature_set.png"
-              alt="Screenshot of ACH Fraud Controls"
+              image={{ src: "/ach-fraud/feature_set1.jpg", alt: "inventory of features" }}
               caption="Collecting and outlining possible feature set and architecture based on our assumptions for user expectations and accessibility."
+              variant="oneSmall"
             />
-          </div>
+        </div>
+        <div className="gridWrapper pb-8 pt-8">
+
+            <SimpleImg
+              image={[
+                { src: "/ach-fraud/amy.jpg", alt: "Amy, a business owner" },
+                { src: "/ach-fraud/ken.jpg", alt: "Ken, a business owner" },
+              ]}
+              caption="Interviewing small business owners. Amy, owner of a local pizzeria and Ken, owner of a music store and school."
+              variant="twoSmall"
+            />
+
         </div>
       </div>
 
-      {/* <Testimonial
+      <div className="caseSection">
+        <SectionHeader
+          headline="Explore and Iterate"
+          subheadline="I iterated on various design approaches that prioritized simplicity, and clarity while allowing granular control. I also ensured the feature was easy to discover without disrupting the flow of more frequent or critical user actions."
+        />
+        <div className="gridWrapper pt-8 ">
+            <SimpleImg
+              image={[
+                { src: "/ach-fraud/iterate1.jpg", alt: "Iterate1" },
+                { src: "/ach-fraud/iterate2.jpg", alt: "iterate2" },
+              ]}
+              variant="twoLarge"
+            />
+            </div>
+            <div className="gridWrapper pb-8 pt-8 ">
+                        <SimpleImg
+              image={[
+                { src: "/ach-fraud/iterate3.jpg", alt: "Iterate3" },
+                { src: "/ach-fraud/iterate4.jpg", alt: "iterate4" },
+              ]}
+              variant="twoLarge"
+            />
+
+        </div>
+      </div>
+      
+      <div className="caseSection">
+        <SectionHeader
+          headline="Refine, Ship and Evaluate"
+          subheadline="These are the final shipped designs"
+        />
+        <div className="gridWrapper pt-8 ">
+            <SimpleImg
+              image={{ src: "/ach-fraud/iterate1.jpg", alt: "Iterate1" }}
+              variant="oneLarge"
+            />
+            </div>
+            <div className="gridWrapper pb-8 pt-8 ">
+                        <SimpleImg
+              image={
+                { src: "/ach-fraud/iterate3.jpg", alt: "Iterate3" }
+              }
+              variant="oneLarge"
+            />
+
+        </div>
+      </div>
+
+
+
+      <Testimonial
         imageSrc="/headshots/william_levinson.jpeg"
         name="William Levinson"
         jobTitle="Product at Bluevine"
         quote="Douglas is an exceptional product designer whose work consistently exemplifies a deep commitment to customer-centric design. I wholeheartedly recommend Douglas to any design team looking to their team to the next level."
-      /> */}
+      />
       <Contact />
     </Layout>
   );

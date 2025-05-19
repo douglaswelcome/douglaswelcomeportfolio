@@ -6,8 +6,8 @@
 } 
 
 .projectHeroImgContainer {
-    grid-column-start: 2;
-    grid-column-end: span 10;
+    grid-column-start: 1;
+    grid-column-end: span 12;
     position:relative;
     @include breakpoint (w-sm) {
 

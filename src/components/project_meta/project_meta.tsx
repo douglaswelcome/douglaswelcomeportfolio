@@ -1,28 +1,36 @@
-import styles from './project_meta.module.scss';
+import styles from '@/components/project_meta/project_meta.module.scss';
+import { motion } from 'framer-motion';
 
-interface Project_MetaProps {
+interface ProjectMetaProps {
   time: string;
   team: string;
   role: string;
 }
 
-export default function Project_Meta({ time, team, role }: Project_MetaProps) {
+export default function ProjectMeta({ time, team, role }: ProjectMetaProps) {
   return (
-    <div className={styles.metaWrapper}>
-      <div className={styles.metaCol}>
-        <div className={styles.metaLabel}>TIME</div>
-        <div className={styles.metaValue}>{time}</div>
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3, ease: 'easeOut' }}
+      viewport={{ once: true, amount: 0.5 }}
+      className={styles.rowWrapper}>
+      <div className={styles.metaWrapper}>
+        <div className={styles.metaCol}>
+          <h3 className={styles.metaLabel}>TIME</h3>
+          <p className={styles.metaValue}>{time}</p>
+        </div>
+        <div className={styles.divider} />
+        <div className={styles.metaCol}>
+          <h3 className={styles.metaLabel}>TEAM</h3>
+          <p className={styles.metaValue}>{team}</p>
+        </div>
+        <div className={styles.divider} />
+        <div className={styles.metaCol}>
+          <h3 className={styles.metaLabel}>ROLE</h3>
+          <p className={styles.metaValue}>{role}</p>
+        </div>
       </div>
-      <div className={styles.divider} />
-      <div className={styles.metaCol}>
-        <div className={styles.metaLabel}>TEAM</div>
-        <div className={styles.metaValue}>{team}</div>
-      </div>
-      <div className={styles.divider} />
-      <div className={styles.metaCol}>
-        <div className={styles.metaLabel}>ROLE</div>
-        <div className={styles.metaValue}>{role}</div>
-      </div>
-    </div>
+    </motion.div>
   );
 } 
