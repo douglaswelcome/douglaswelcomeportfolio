@@ -1,0 +1,9 @@
+/* Font loading states */
+.fonts-loading * {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fonts-loaded * {
+  opacity: 1;
+} 
