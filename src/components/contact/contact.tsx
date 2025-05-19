@@ -18,7 +18,7 @@ export default function FullWidthPage() {
         </div>
         <div className="text-center relative">
           <h2 className=" mb-4">
-            <span className="label_text">Let's build something</span> <b>together</b>.
+            <span className="label_text">Let&apos;s build something</span> <b>together</b>.
           </h2>
           <div className="flex items-center justify-center space-x-2">
             <div className="flex items-center justify-center">
