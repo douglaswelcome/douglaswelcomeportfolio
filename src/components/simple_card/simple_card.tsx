@@ -19,12 +19,12 @@ export default function SimpleCard({ count, headline, body, className }: SimpleC
       className={className}
     >
       <Card className={`${styles.card} h-full select-none`}>
-        <CardContent className={`${styles.cardContent} flex flex-col p-6 h-full`}>
-          <h2 className={styles.cardCount}>{count}</h2>
-          <h4>{headline} </h4>
-          <p className={`${styles.body}`}>{body}</p>
-        </CardContent>
-      </Card>
+      <CardContent className={`${styles.cardContent} flex flex-col p-6 h-full`}>
+        <h2 className={styles.cardCount}>{count}</h2>
+        <h4>{headline} </h4>
+        <p className={`${styles.body}`}>{body}</p>
+      </CardContent>
+    </Card>
     </motion.div>
   )
 }
