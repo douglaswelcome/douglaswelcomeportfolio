@@ -87,7 +87,7 @@
   rotate: -12deg;
   scale: 1.35;
   transform-origin: top left;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 
   @include breakpoint(w-med) {
     scale: 1;
@@ -147,7 +147,7 @@
 .imageContainer {
   position: relative;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   
   &.loaded {
     opacity: 1;

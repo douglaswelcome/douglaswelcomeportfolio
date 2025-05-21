@@ -5,7 +5,6 @@ import { testimonials } from "@/data/testimonials"
 import { TestimonialCard } from "@/components/card_carousel/card_carousel"
 import styles from "@/components/carousel/carousel.module.scss"
 
-
 export function TestimonialCarousel() {
   const [isDragging, setIsDragging] = React.useState(false)
   const [startX, setStartX] = React.useState(0)
@@ -13,32 +12,33 @@ export function TestimonialCarousel() {
   const carouselRef = React.useRef<HTMLDivElement>(null)
   const carouselTrackRef = React.useRef<HTMLDivElement>(null)
 
-  React.useEffect(() => {
-    const carouselTrack = carouselTrackRef.current
-    if (!carouselTrack) return
+  // Function to handle infinite scroll
+  const handleInfiniteScroll = () => {
+    const track = carouselTrackRef.current
+    if (!track) return
 
-    const resetAnimation = () => {
-      carouselTrack.style.animation = "none"
-      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-      carouselTrack.offsetHeight // Trigger reflow
-      carouselTrack.style.animation = ''
+    const trackWidth = track.scrollWidth / 2
+    const currentScroll = track.scrollLeft
+
+    if (currentScroll <= 0) {
+      track.scrollLeft = trackWidth
+    } else if (currentScroll >= trackWidth) {
+      track.scrollLeft = 0
     }
+  }
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            resetAnimation()
-          }
-        })
-      },
-      { threshold: 0.5 },
-    )
+  React.useEffect(() => {
+    const track = carouselTrackRef.current
+    if (!track) return
 
-    observer.observe(carouselTrack)
+    // Set initial scroll position
+    track.scrollLeft = track.scrollWidth / 4
+
+    // Add scroll event listener
+    track.addEventListener('scroll', handleInfiniteScroll)
 
     return () => {
-      observer.disconnect()
+      track.removeEventListener('scroll', handleInfiniteScroll)
     }
   }, [])
 
@@ -46,10 +46,20 @@ export function TestimonialCarousel() {
     setIsDragging(true)
     setStartX(clientX - carouselRef.current!.offsetLeft)
     setScrollLeft(carouselRef.current!.scrollLeft)
+    
+    // Pause animation during drag
+    if (carouselTrackRef.current) {
+      carouselTrackRef.current.style.animationPlayState = 'paused'
+    }
   }
 
   const handleEnd = () => {
     setIsDragging(false)
+    
+    // Resume animation after drag
+    if (carouselTrackRef.current) {
+      carouselTrackRef.current.style.animationPlayState = 'running'
+    }
   }
 
   const handleMove = (clientX: number) => {
@@ -87,7 +97,7 @@ export function TestimonialCarousel() {
         onTouchMove={handleTouchMove}
       >
         <div ref={carouselTrackRef} className={styles.carouselTrack}>
-          {[...testimonials, ...testimonials].map((testimonial, index) => (
+          {[...testimonials, ...testimonials, ...testimonials].map((testimonial, index) => (
             <div key={`${testimonial.id}-${index}`} className={`${styles.carouselItem} w-[300px] flex-shrink-0 px-2`}>
               <TestimonialCard testimonial={testimonial} />
             </div>

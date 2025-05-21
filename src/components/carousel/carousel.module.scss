@@ -15,10 +15,10 @@
     padding-bottom:1.5rem;
   }
 
-  
   .carouselTrack {
     display: inline-flex;
-    animation: scroll 30s linear infinite;
+    scroll-behavior: smooth;
+    animation: scroll 60s linear infinite;
   }
 
   @keyframes scroll {

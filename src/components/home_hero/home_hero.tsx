@@ -1,9 +1,41 @@
 import styles from "@/components/home_hero/home_hero.module.scss";
 import Image from "next/image";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function HomeHero() {
   const [isLoaded, setIsLoaded] = useState(false);
+
+  // Define floating animations for each circle
+  const circle1Animation = {
+    y: [0, 15, -4, 0],
+    x: [0, 10, 8, 0],
+    transition: {
+      duration: 7,
+      repeat: Infinity,
+      ease: "easeInOut"
+    }
+  };
+
+  const circle2Animation = {
+    y: [0, -20, 4, 0],
+    x: [0, -15, 10, 0],
+    transition: {
+      duration: 18,
+      repeat: Infinity,
+      ease: "easeInOut"
+    }
+  };
+
+  const circle3Animation = {
+    y: [0, -10, 4, 0],
+    x: [0, 15, -8, 0],
+    transition: {
+      duration: 12,
+      repeat: Infinity,
+      ease: "easeInOut"
+    }
+  };
 
   return (
     <div className={styles.homeHero}>
@@ -15,8 +47,14 @@ export default function HomeHero() {
         </h4>
       </div>
       <div className={styles.homeImageContainer}>
-        <div className={styles.circle2} />
-        <div className={styles.circle3} />
+        <motion.div 
+          className={styles.circle2}
+          animate={circle2Animation}
+        />
+        <motion.div 
+          className={styles.circle3}
+          animate={circle3Animation}
+        />
         <div className={`${styles.imageContainer} ${isLoaded ? styles.loaded : ''}`}>
           <Image
             className={styles.homeImage}
@@ -28,7 +66,10 @@ export default function HomeHero() {
             onLoad={() => setIsLoaded(true)}
           />
         </div>
-        <div className={styles.circle1} />
+        <motion.div 
+          className={styles.circle1}
+          animate={circle1Animation}
+        />
       </div>
     </div>
   );
