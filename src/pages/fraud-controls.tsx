@@ -183,7 +183,7 @@ export default function Test() {
         <div className="gridWrapper pt-8 ">
         <SimpleImg
             image={
-              { src: "/ach-fraud/desktop2.jpg", alt: "desktop2" }
+              { src: "/ach-fraud/desktop3.jpg", alt: "desktop3" }
             }
             variant="oneLarge"
           />
@@ -199,7 +199,7 @@ export default function Test() {
         <div className="gridWrapper pb-8 pt-8 ">
           <SimpleImg
             image={
-              { src: "/ach-fraud/desktop2.jpg", alt: "desktop2" }
+              { src: "/ach-fraud/mobile2.jpg", alt: "mobile2" }
             }
             variant="oneLarge"
           />

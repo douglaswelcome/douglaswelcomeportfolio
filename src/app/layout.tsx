@@ -1,28 +1,15 @@
-'use client';
-
-import { useEffect } from 'react';
+import FontLoader from './FontLoader';
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  useEffect(() => {
-    document.documentElement.classList.add('fonts-loading');
-    if (document.fonts.status === 'loaded') {
-      document.documentElement.classList.remove('fonts-loading');
-      document.documentElement.classList.add('fonts-loaded');
-    } else {
-      document.fonts.ready.then(() => {
-        document.documentElement.classList.remove('fonts-loading');
-        document.documentElement.classList.add('fonts-loaded');
-      });
-    }
-  }, []);
-
   return (
     <html lang="en" className="fonts-loading">
-      <head />
+      <head>
+        <FontLoader />
+      </head>
       <body>
         {children}
       </body>
