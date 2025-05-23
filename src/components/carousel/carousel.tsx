@@ -7,20 +7,14 @@ import styles from "@/components/carousel/carousel.module.scss"
 
 export function TestimonialCarousel() {
   const [isDragging, setIsDragging] = React.useState(false)
-  const [startX, setStartX] = React.useState(0)
-  const [scrollLeft, setScrollLeft] = React.useState(0)
   const carouselRef = React.useRef<HTMLDivElement>(null)
   const carouselTrackRef = React.useRef<HTMLDivElement>(null)
   const lastXRef = React.useRef<number | null>(null)
 
   const handleStart = (clientX: number) => {
     setIsDragging(true)
-    setStartX(clientX)
     lastXRef.current = clientX
-    if (carouselRef.current) {
-      setScrollLeft(carouselRef.current.scrollLeft)
-      carouselTrackRef.current?.classList.add(styles.paused)
-    }
+    carouselTrackRef.current?.classList.add(styles.paused)
   }
 
   const handleEnd = () => {
