@@ -4,7 +4,7 @@ import SectionHeader from "@/components/section_header/section_header";
 import CaseCard from "@/components/case_card/case_card";
 import Contact from "@/components/contact/contact";
 import { BluevineLogo } from "@/components/logos/bluevine";
-import { MekanoidLogo } from "@/components/logos/mekanoid";
+// import { MekanoidLogo } from "@/components/logos/mekanoid";
 import { TestimonialCarousel } from "@/components/carousel/carousel";
 
 export default function Test() {

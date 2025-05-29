@@ -1,21 +1,17 @@
-import Testimonial from "@/components/testimonial_card/testimonial_card"
-import type { Testimonial as TestimonialType } from "@/data/testimonials"
-import styles from "@/components/testimonial_container/testimonial_container.module.scss"
+import { Testimonial } from "@/data/testimonials";
+import styles from "./testimonial_container.module.scss";
+import TestimonialCard from "../testimonial_card/testimonial_card";
 
 interface TestimonialContainerProps {
-  testimonials: TestimonialType[]
-  numberOfCards: 1 | 2 | 3
+  testimonials: Testimonial[];
 }
 
-export function TestimonialContainer({ testimonials, numberOfCards }: TestimonialContainerProps) {
-  // Ensure we only take the number of testimonials we need
-  const displayTestimonials = testimonials.slice(0, numberOfCards)
-
+export function TestimonialContainer({ testimonials }: TestimonialContainerProps) {
   return (
-    <div className={styles.container} data-cards={numberOfCards}>
-      {displayTestimonials.map((testimonial, index) => (
+    <div className={styles.container}>
+      {testimonials.map((testimonial) => (
         <div key={testimonial.name} className={styles.cardWrapper}>
-          <Testimonial
+          <TestimonialCard
             imageSrc={testimonial.image}
             name={testimonial.name}
             jobTitle={testimonial.jobTitle}
@@ -25,5 +21,5 @@ export function TestimonialContainer({ testimonials, numberOfCards }: Testimonia
         </div>
       ))}
     </div>
-  )
+  );
 } 

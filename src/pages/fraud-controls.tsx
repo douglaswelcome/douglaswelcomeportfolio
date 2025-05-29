@@ -2,7 +2,6 @@ import Layout from "@/layouts/project";
 import Contact from "@/components/contact/contact";
 import ProjectHero from "@/components/project_hero/project_hero";
 import ProjectHeroImg from "@/components/project_hero_img/project_hero_img";
-import Testimonial from "@/components/testimonial_card/testimonial_card";
 import SectionHeader from "@/components/section_header/section_header";
 import SimpleCard from "@/components/simple_card/simple_card";
 import WideListItem from "@/components/wide_list_item/wide_list_item";
