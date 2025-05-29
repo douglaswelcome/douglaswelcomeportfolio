@@ -59,8 +59,8 @@ export default function Test() {
       /> */}
       <SimpleText 
         segments={[
-          { text: "More to come. " },
-          { text: "See here", href: "https://douglaswelcome.com/sample-of-work" }
+          { text: "More case studies coming soon. Feel free to take a look at " },
+          { text: "more of my work here.", href: "https://douglaswelcome.com/sample-of-work" }
         ]} 
       />
 

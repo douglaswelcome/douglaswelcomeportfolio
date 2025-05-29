@@ -12,7 +12,7 @@ interface SimpleTextProps {
 export function SimpleText({ segments }: SimpleTextProps) {
   return (
     <div className={styles.container}>
-      <p className={styles.text}>
+      <h4 className={styles.text}>
         {segments.map((segment, index) => {
           if (segment.href) {
             return (
@@ -27,7 +27,7 @@ export function SimpleText({ segments }: SimpleTextProps) {
           }
           return <span key={index}>{segment.text}</span>;
         })}
-      </p>
+      </h4>
     </div>
   );
 } 

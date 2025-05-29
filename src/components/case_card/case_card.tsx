@@ -31,7 +31,7 @@ export default function CaseCard({
   return (
     <Link
       href={cardHref}
-      className={`${styles.caseCard} ${isHovered ? styles.hovered : ""} ${isActive ? styles.active : ""}`}
+      className={`${styles.caseCard} ${isHovered ? styles.hovered : ""} ${isActive ? styles.active : ""} interactive`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => {
         setIsHovered(false)

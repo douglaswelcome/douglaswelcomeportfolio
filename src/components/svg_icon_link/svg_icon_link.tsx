@@ -12,7 +12,7 @@ interface SvgIconLinkProps {
 
 export default function SvgIconLink({ path, width, height, url, className }: SvgIconLinkProps) {
   return (
-    <Link href={url} className={styles.linkIcon}>
+    <Link href={url} className={`${styles.linkIcon} interactive`}>
       <SvgIcon path={path} width={width} height={height} fill="var(--foreground)" className={className} />
     </Link>
   )

@@ -1,21 +1,22 @@
+@use "src/styles/foundations/_response_mixins.scss" as *;
+
 .container {
   grid-column: 5 / span 4;
   text-align: center;
+
+  @include breakpoint(w-med) {
+    grid-column: 3 / span 8;
+  }
+
+  @include breakpoint(w-sm) {
+    grid-column: 1 / span 12;
+  }
 }
 
-.text {
-  color: var(--foreground);
-  font-size: 1.125rem;
-  line-height: 1.75;
-}
 
 .link {
-  color: var(--color-brand);
-  text-decoration: none;
-  transition: color 0.2s ease;
 
-  &:hover {
-    color: var(--color-brand-hover);
-    text-decoration: underline;
-  }
-} 
+  cursor: pointer !important;
+
+}
+
