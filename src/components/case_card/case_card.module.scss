@@ -16,6 +16,8 @@
   outline-offset: -2px;
   text-decoration: none;
   box-shadow: var(--shadow);
+  position: relative;
+  z-index: 1;
 
   &::after {
     content: none;
@@ -70,6 +72,7 @@
   align-items: center;
   justify-content: center;
   position:relative;
+  z-index: 0;
   @include breakpoint(w-med) {
     max-height:300px;
   }
@@ -88,6 +91,7 @@
   scale: 1.35;
   transform-origin: top left;
   transition: all 0.3s ease;
+  z-index: 0;
 
   @include breakpoint(w-med) {
     scale: 1;
