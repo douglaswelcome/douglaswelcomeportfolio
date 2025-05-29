@@ -4,12 +4,16 @@ import TestimonialCard from "../testimonial_card/testimonial_card";
 
 interface TestimonialContainerProps {
   testimonials: Testimonial[];
+  numberOfCards: 1 | 2 | 3;
 }
 
-export function TestimonialContainer({ testimonials }: TestimonialContainerProps) {
+export function TestimonialContainer({ testimonials, numberOfCards }: TestimonialContainerProps) {
+  // Ensure we only take the number of testimonials we need
+  const displayTestimonials = testimonials.slice(0, numberOfCards);
+
   return (
-    <div className={styles.container}>
-      {testimonials.map((testimonial) => (
+    <div className={styles.container} data-cards={numberOfCards}>
+      {displayTestimonials.map((testimonial) => (
         <div key={testimonial.name} className={styles.cardWrapper}>
           <TestimonialCard
             imageSrc={testimonial.image}
