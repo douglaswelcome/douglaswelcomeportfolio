@@ -1,4 +1,4 @@
-import styles from "./simple_text.module.scss";
+import styles from "@/components/simple_text/simple_text.module.scss";
 
 interface TextSegment {
   text: string;

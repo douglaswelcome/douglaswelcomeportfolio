@@ -6,6 +6,7 @@ import Contact from "@/components/contact/contact";
 import { BluevineLogo } from "@/components/logos/bluevine";
 // import { MekanoidLogo } from "@/components/logos/mekanoid";
 import { TestimonialCarousel } from "@/components/carousel/carousel";
+import { SimpleText } from "@/components/simple_text/simple_text";
 
 export default function Test() {
   return (
@@ -56,6 +57,12 @@ export default function Test() {
           imgHeight: 1005,
         }}
       /> */}
+      <SimpleText 
+        segments={[
+          { text: "More to come. " },
+          { text: "See here", href: "https://douglaswelcome.com/sample-of-work" }
+        ]} 
+      />
 
       <SectionHeader tag="Recommendations" headline="Colleague and Client Reviews" />
       <TestimonialCarousel />
