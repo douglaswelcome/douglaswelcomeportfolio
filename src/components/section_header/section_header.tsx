@@ -13,8 +13,8 @@ export default function SectionHeader({ tag, headline, subheadline }: SectionHea
     <div className={styles.sectionHeader}>
       <div className={styles.sectionHeaderInner}>
       <h3 className="">{tag}</h3>
-      <h2>{headline}</h2>
-      <h4 className="mt-6">{subheadline}</h4>
+      <h2 >{headline}</h2>
+      <h4 className="mt-3">{subheadline}</h4>
       </div>
     </div>
   );

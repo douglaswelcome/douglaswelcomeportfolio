@@ -1,7 +1,7 @@
 @use "src/styles/foundations/_response_mixins.scss" as *;
 
 .caseCard{
-  border: var(--border) ;
+
   border-radius:var(--border-radius);
   display: grid;
   grid-auto-flow: column;

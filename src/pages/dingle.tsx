@@ -1,65 +1,29 @@
-import Layout from "@/layouts/home";
-import HomeHero from "@/components/home_hero/home_hero";
-import SectionHeader from "@/components/section_header/section_header";
-import CaseCard from "@/components/case_card/case_card";
-import Contact from "@/components/contact/contact";
-import { BluevineLogo } from "@/components/logos/bluevine";
-import { MekanoidLogo } from "@/components/logos/mekanoid";
-import { TestimonialCarousel } from "@/components/carousel/carousel";
+import type { Metadata } from "next";
+import SvgIcon from "@/components/svg_icon/svg_icon";
 
-export default function Test() {
+export const metadata: Metadata = {
+  title: "Douglas Welcome Portfolio",
+  description: "Douglas Welcome is a Product Designer with a passtion for brand and all things front-end web. ",
+};
+
+export default function Home() {
   return (
-    <Layout>
-      <HomeHero />
-      <SectionHeader tag="Work" headline="Selected Cases" />
-      <CaseCard
-        headline="Fraud Controls for SMB Banking"
-        tag="Case Study"
-        subheadline="ACH fraud controls for small businesses include transaction limits and dual authorization to prevent unauthorized transfers."
-        LogoComponent={BluevineLogo}
-        ctaCopy="View Case Study"
-        cardHref="fraud-controls"
-        cardImg={{
-          imgsrc: "/screenshots/achfraud_accounts.png",
-          imgalt: "Screenshot of Fraud Controls for SMB Banking",
-          imgWidth: 1440,
-          imgHeight: 1005,
-        }}
-      />
+    <div className="grid grid-rows-1 items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-dm-sans)]">
+      <main className="flex flex-col justify-items-center items-center gap-2">
+        <div className="">
+          <SvgIcon path="dwlogo.svg" height={24} width={32} fill="var(--foreground" />
+        </div>
+        <div className="text-sm text-center font-[family-name:var(--font-dm-sans)]">
+            <p>Full portfolio for Douglas Welcome coming soon.</p>
+        </div>
+        <div className="text-sm text-center font-[family-name:var(--font-dm-sans)]">
+            <p>To get in touch, please email me at <a href="mailto:hello@douglaswelcome.com">hello@douglaswelcome.com</a> or take a look at some of <a href="/sample-of-work">my work</a>.</p>
+        </div>
+        {/* <div className="pt-[1rem]">
+        <Cta copy="View Sample of Work" href="/sample-of-work" />
+        </div> */}
 
-      <CaseCard
-        headline="Mekanoid Project"
-        tag="Case Study"
-        subheadline="Example Subheadline"
-        LogoComponent={MekanoidLogo}
-        ctaCopy="View Case Study"
-        cardHref="https://www.slapkirk.com"
-        cardImg={{
-          imgsrc: "/screenshots/achfraud_accounts.png",
-          imgalt: "Screenshot of Fraud Controls for SMB Banking",
-          imgWidth: 1440,
-          imgHeight: 1005,
-        }}
-      />
-
-      <CaseCard
-        headline="Debit Cards for Employees"
-        tag="Case Study"
-        subheadline="Example Subheadline"
-        LogoComponent={BluevineLogo}
-        ctaCopy="View Case Study"
-        cardHref="debit-cards-for-employees"
-        cardImg={{
-          imgsrc: "/screenshots/achfraud_accounts.png",
-          imgalt: "Screenshot of Fraud Controls for SMB Banking",
-          imgWidth: 1440,
-          imgHeight: 1005,
-        }}
-      />
-
-      <SectionHeader tag="Recommendations" headline="Colleague and Client Reviews" />
-      <TestimonialCarousel />
-      <Contact />
-    </Layout>
+      </main>
+    </div>
   );
 }

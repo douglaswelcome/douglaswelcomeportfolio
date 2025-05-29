@@ -1,0 +1,43 @@
+@use "src/styles/foundations/_response_mixins.scss" as *;
+@use "src/styles/foundations/_colors.scss" as *;
+
+.container {
+    @extend %grid-12;
+}
+
+.barContainer {
+  grid-column: 2 / span 6;
+  height: 120px; /* Example size */
+  border-radius: 1rem;
+  display: flex;
+  overflow: hidden;
+  
+
+  @include breakpoint (w-sm) {
+    grid-column: 1 / span 8;
+}
+}
+
+.fillBar {
+  height: 100%;
+}
+
+.textContainer {
+    grid-column: 8 / span 4;
+  margin-left: 1rem; /* Tailwind ml-4 */
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  @include breakpoint (w-sm) {
+    grid-column: 9 / span 4;
+}
+}
+
+.percentageText {
+  color: var(--color-default);
+  font-weight:700;
+}
+
+.descriptionText {
+  color: var(--color-label);
+} 

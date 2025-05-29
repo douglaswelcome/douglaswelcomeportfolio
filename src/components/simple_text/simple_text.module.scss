@@ -1,0 +1,21 @@
+.container {
+  grid-column: 5 / span 4;
+  text-align: center;
+}
+
+.text {
+  color: var(--foreground);
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+.link {
+  color: var(--color-brand);
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--color-brand-hover);
+    text-decoration: underline;
+  }
+} 

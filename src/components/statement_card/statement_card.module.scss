@@ -1,7 +1,7 @@
 @use "src/styles/foundations/_response_mixins.scss" as *;
 
 .wrapper {
-  grid-column: 1 / span 12;
+  grid-column: 2 / span 10;
   @include breakpoint(w-med) {
     grid-column: 1 / span 12;
   }
@@ -10,7 +10,6 @@
 .card {
 
   background-color: var(--color-bg2);
-  border: var(--border);
   border-radius: 1rem;
 }
 

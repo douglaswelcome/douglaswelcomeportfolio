@@ -11,7 +11,7 @@ export default function HomeHero() {
     y: [0, 15, -4, 0],
     x: [0, 10, 8, 0],
     transition: {
-      duration: 7,
+      duration: 5,
       repeat: Infinity,
       ease: "easeInOut"
     }
@@ -21,7 +21,7 @@ export default function HomeHero() {
     y: [0, -20, 4, 0],
     x: [0, -15, 10, 0],
     transition: {
-      duration: 18,
+      duration: 14,
       repeat: Infinity,
       ease: "easeInOut"
     }
@@ -31,7 +31,7 @@ export default function HomeHero() {
     y: [0, -10, 4, 0],
     x: [0, 15, -8, 0],
     transition: {
-      duration: 12,
+      duration: 10,
       repeat: Infinity,
       ease: "easeInOut"
     }
