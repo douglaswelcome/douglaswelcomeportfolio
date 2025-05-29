@@ -1,11 +1,9 @@
 .card {
   box-shadow: var(--shadow);
   background-color: var(--color-bg2);
-  border: var(--border);
+
   border-radius: 1rem;
 }
-
-
 
 .cardContent {
     overflow: hidden;
@@ -20,7 +18,7 @@
 }
 
 .image {
-  border: var(--border);
+
 }
 
 .name {
@@ -30,4 +28,14 @@
 .jobTitle,
 .company {
   color: var(--color-label);
+}
+
+.imageContainer {
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  
+  &.loaded {
+    opacity: 1;
+  }
 }

@@ -1,0 +1,51 @@
+@use "src/styles/foundations/_response_mixins.scss" as *;
+// @use "src/styles/foundations/_colors.scss" as *;
+
+.wideListItem {
+  border-bottom: solid 1px var(--color-hairline);
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  grid-column: 3 / span 8;
+
+  @include breakpoint(w-med) {
+    grid-column: 1 / span 12;
+  }
+  
+  
+
+  &.noBorder {
+    border-bottom: none;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+} 
+
+.headline {
+  margin-bottom: 6px;
+  vertical-align: baseline;
+  @include breakpoint(w-lg) {
+    margin-bottom: 3px;
+  }
+  @include breakpoint(w-med) {
+    margin-bottom: 0px;
+  }
+  @include breakpoint(w-sm) {
+    margin-bottom: 2px;
+  }
+}
+
+.count {
+  color: var(--color-brand);
+  line-height: 1;
+  vertical-align: baseline;
+
+  margin-top: -.75rem;
+}

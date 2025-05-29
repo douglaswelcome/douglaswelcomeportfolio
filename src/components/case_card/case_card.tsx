@@ -26,11 +26,12 @@ export default function CaseCard({
 }: CaseCardProps) {
   const [isHovered, setIsHovered] = useState(false)
   const [isActive, setIsActive] = useState(false)
+  const [isLoaded, setIsLoaded] = useState(false)
 
   return (
     <Link
       href={cardHref}
-      className={`${styles.caseCard} ${isHovered ? styles.hovered : ""} ${isActive ? styles.active : ""}`}
+      className={`${styles.caseCard} ${isHovered ? styles.hovered : ""} ${isActive ? styles.active : ""} interactive`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => {
         setIsHovered(false)
@@ -55,12 +56,13 @@ export default function CaseCard({
         </div>
       </div>
       <div className={styles.right}>
-        <div className={styles.right_img}>
+        <div className={`${styles.right_img} ${styles.imageContainer} ${isLoaded ? styles.loaded : ''}`}>
           <Image
             src={cardImg.imgsrc || "/placeholder.svg"}
             alt={cardImg.imgalt}
             width={cardImg.imgWidth}
             height={cardImg.imgHeight}
+            onLoad={() => setIsLoaded(true)}
           />
         </div>
       </div>

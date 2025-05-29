@@ -59,9 +59,12 @@ $w-sm: 320px; //320px
   }
 
   .page-width {
-    padding-left: 1rem;
-    padding-right: 1rem;
     @include page-width;
+
+    @include breakpoint(w-sm) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
   }
 
   @mixin column-gap-12 {
@@ -103,9 +106,7 @@ $w-sm: 320px; //320px
     @include column-gap-6;
   }
 
-  .grid-wrapper {
-    @extend %grid-12;
-  }
+
 
   @mixin small-pad() {
     @include breakpoint(w-sm) {
@@ -135,3 +136,17 @@ $w-sm: 320px; //320px
     justify-content: center;
   }
 
+  .gridWrapper {
+    @extend %grid-12;
+  }
+  .caseSection{
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .rowToColumn {
+    flex-direction: row;
+    @include breakpoint(w-med) {
+      flex-direction: column;
+    }
+  }

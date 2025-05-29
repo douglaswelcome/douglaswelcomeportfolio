@@ -45,6 +45,11 @@ body {
   background: var(--background);
 }
 
+img {
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

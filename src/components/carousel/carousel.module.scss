@@ -9,18 +9,28 @@
   }
   
   .carousel {
-    overflow: hidden;
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
-    padding-top:1rem;
-    padding-bottom:1.5rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
-  
   .carouselTrack {
-    display: inline-flex;
-    animation: scroll 30s linear infinite;
+    display: flex;
+    animation: scroll 15s linear infinite;
+    will-change: transform;
   }
-
+  
+  .carouselTrack.paused {
+    animation-play-state: paused;
+  }
+  
   @keyframes scroll {
     0% {
       transform: translateX(0);
@@ -49,18 +59,19 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 8rem;
+    width: 100px;
     pointer-events: none;
+    z-index: 1;
   }
   
   .leftGradient {
     left: 0;
-    background: linear-gradient(to right, var(--background), transparent);
+    background: linear-gradient(to right, var(--background) 0%, transparent 100%);
   }
   
   .rightGradient {
     right: 0;
-    background: linear-gradient(to left, var(--background), transparent);
+    background: linear-gradient(to left, var(--background) 0%, transparent 100%);
   }
   
   .carousel:active {

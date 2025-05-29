@@ -5,58 +5,30 @@ import { testimonials } from "@/data/testimonials"
 import { TestimonialCard } from "@/components/card_carousel/card_carousel"
 import styles from "@/components/carousel/carousel.module.scss"
 
-
 export function TestimonialCarousel() {
   const [isDragging, setIsDragging] = React.useState(false)
-  const [startX, setStartX] = React.useState(0)
-  const [scrollLeft, setScrollLeft] = React.useState(0)
   const carouselRef = React.useRef<HTMLDivElement>(null)
   const carouselTrackRef = React.useRef<HTMLDivElement>(null)
-
-  React.useEffect(() => {
-    const carouselTrack = carouselTrackRef.current
-    if (!carouselTrack) return
-
-    const resetAnimation = () => {
-      carouselTrack.style.animation = "none"
-      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-      carouselTrack.offsetHeight // Trigger reflow
-      carouselTrack.style.animation = ''
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            resetAnimation()
-          }
-        })
-      },
-      { threshold: 0.5 },
-    )
-
-    observer.observe(carouselTrack)
-
-    return () => {
-      observer.disconnect()
-    }
-  }, [])
+  const lastXRef = React.useRef<number | null>(null)
 
   const handleStart = (clientX: number) => {
     setIsDragging(true)
-    setStartX(clientX - carouselRef.current!.offsetLeft)
-    setScrollLeft(carouselRef.current!.scrollLeft)
+    lastXRef.current = clientX
+    carouselTrackRef.current?.classList.add(styles.paused)
   }
 
   const handleEnd = () => {
     setIsDragging(false)
+    lastXRef.current = null
+    carouselTrackRef.current?.classList.remove(styles.paused)
   }
 
   const handleMove = (clientX: number) => {
-    if (!isDragging) return
-    const x = clientX - carouselRef.current!.offsetLeft
-    const walk = (x - startX) * 2
-    carouselRef.current!.scrollLeft = scrollLeft - walk
+    if (!isDragging || !carouselRef.current || !lastXRef.current) return
+    
+    const deltaX = clientX - lastXRef.current
+    carouselRef.current.scrollLeft -= deltaX
+    lastXRef.current = clientX
   }
 
   const handleMouseDown = (e: React.MouseEvent) => handleStart(e.pageX)
@@ -77,7 +49,7 @@ export function TestimonialCarousel() {
     <div className={styles.carouselWrapper}>
       <div
         ref={carouselRef}
-        className={`${styles.carousel} w-full overflow-hidden cursor-grab active:cursor-grabbing select-none`}
+        className={`${styles.carousel} w-full cursor-grab active:cursor-grabbing select-none`}
         onMouseDown={handleMouseDown}
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}
@@ -86,8 +58,11 @@ export function TestimonialCarousel() {
         onTouchEnd={handleTouchEnd}
         onTouchMove={handleTouchMove}
       >
-        <div ref={carouselTrackRef} className={styles.carouselTrack}>
-          {[...testimonials, ...testimonials].map((testimonial, index) => (
+        <div 
+          ref={carouselTrackRef} 
+          className={styles.carouselTrack}
+        >
+          {[...testimonials, ...testimonials, ...testimonials].map((testimonial, index) => (
             <div key={`${testimonial.id}-${index}`} className={`${styles.carouselItem} w-[300px] flex-shrink-0 px-2`}>
               <TestimonialCard testimonial={testimonial} />
             </div>

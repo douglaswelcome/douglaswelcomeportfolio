@@ -1,0 +1,35 @@
+@use "src/styles/foundations/_response_mixins.scss" as *;
+
+.rowWrapper {
+  width: 100%;
+  @extend %grid-12;
+}
+.metaWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  grid-column: 4 / span 6;
+}
+
+.metaCol {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.metaLabel {
+  margin-bottom: 0.5rem;
+}
+
+.metaValue {
+  white-space: pre-line;
+}
+
+.divider {
+  width: 1px;
+  background: var(--color-label);
+  height: 80%;
+
+  align-self: center;
+} 
