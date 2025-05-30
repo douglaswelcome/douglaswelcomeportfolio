@@ -256,7 +256,7 @@ export default function Test() {
                 name: "William Levinson",
                 jobTitle: "Product Lead",
                 company: "Bluevine",
-                quote: "Douglas is an exceptional product designer whose work consistently exemplifies a deep commitment to customer-centric design. I wholeheartedly recommend Douglas to any design team looking to their team to the next level.",
+                quote: "Douglas is an exceptional product designer whose work consistently exemplifies a deep commitment to customer-centric design. I wholeheartedly recommend Douglas to any design team looking to take their team to the next level.",
                 image: "/headshots/william_levinson.jpeg"
               },
               {
