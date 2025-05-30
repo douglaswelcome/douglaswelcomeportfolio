@@ -50,7 +50,7 @@ export default function Test() {
         <SectionHeader
           tag="Overview"
           headline="Managing ACH Fraud"
-          subheadline="Bluevine is financial technology company building better banking solutions for growing businesses by providing the attention, funding and financial tools they deserve. With the aim is to offer industry-leading fintech platform with robust security, we were tasked with launching a suite of ACH fraud controls tools to empower business owners to maintain tighter control over who can draw funds from their accounts. This project had four primary phases:"
+          subheadline="Bluevine is financial technology company building better banking solutions for growing businesses by providing the attention, funding and financial tools they deserve. With the aim to offer an industry-leading fintech platform with robust security, we were tasked with launching a suite of ACH fraud controls tools to empower business owners to maintain tighter control over who can draw funds from their accounts. This project had four primary phases:"
         />
         <div className="gridWrapper mt-6">
 
