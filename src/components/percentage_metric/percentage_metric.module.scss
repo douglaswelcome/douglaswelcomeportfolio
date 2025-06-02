@@ -3,6 +3,7 @@
 
 .container {
     @extend %grid-12;
+    align-items: center;
 }
 
 .barContainer {
