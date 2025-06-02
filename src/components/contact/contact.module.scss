@@ -1,9 +1,26 @@
 @use "src/styles/foundations/_response_mixins.scss" as *;
 
+.contact_container {
+  @include page-width;
+  box-sizing: border-box;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
 .circle_container {
   position: absolute;
   width:100%;
   height: 100%;
+  overflow: visible;
+
 }
 
 .circle {
@@ -76,3 +93,10 @@
     }
 
   }
+
+.circle1, .circle2 {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
