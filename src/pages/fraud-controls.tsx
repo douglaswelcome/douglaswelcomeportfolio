@@ -15,6 +15,7 @@ import { TestimonialContainer } from "@/components/testimonial_container/testimo
 export default function Test() {
   return (
     <Layout>
+      
       <div>
         <ProjectHero
           title="Fraud Controls for SMB Banking"
@@ -50,7 +51,7 @@ export default function Test() {
         <SectionHeader
           tag="Overview"
           headline="Managing ACH Fraud"
-          subheadline="Bluevine is financial technology company building better banking solutions for growing businesses by providing the attention, funding and financial tools they deserve. With the aim is to offer industry-leading fintech platform with robust security, we were tasked with launching a suite of ACH fraud controls tools to empower business owners to maintain tighter control over who can draw funds from their accounts. This project had four primary phases:"
+          subheadline="Bluevine is financial technology company building better banking solutions for growing businesses by providing the attention, funding and financial tools they deserve. With the aim to offer an industry-leading fintech platform with robust security, we were tasked with launching a suite of ACH fraud controls tools to empower business owners to maintain tighter control over who can draw funds from their accounts. This project had four primary phases:"
         />
         <div className="gridWrapper mt-6">
 
@@ -256,7 +257,7 @@ export default function Test() {
                 name: "William Levinson",
                 jobTitle: "Product Lead",
                 company: "Bluevine",
-                quote: "Douglas is an exceptional product designer whose work consistently exemplifies a deep commitment to customer-centric design. I wholeheartedly recommend Douglas to any design team looking to their team to the next level.",
+                quote: "Douglas is an exceptional product designer whose work consistently exemplifies a deep commitment to customer-centric design. I wholeheartedly recommend Douglas to any design team looking to take their team to the next level.",
                 image: "/headshots/william_levinson.jpeg"
               },
               {

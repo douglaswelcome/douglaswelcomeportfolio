@@ -29,7 +29,7 @@ export interface Testimonial {
       name: "William Levinson",
       jobTitle: "Product Lead",
       company: "Novo",
-      quote: "Douglas is an exceptional product designer whose work consistently exemplifies a deep commitment to customer-centric design. I  wholeheartedly recommend Douglas to any Design team looking to their team to the next level!",
+      quote: "Douglas is an exceptional product designer whose work consistently exemplifies a deep commitment to customer-centric design. I wholeheartedly recommend Douglas to any Design team looking to take their team to the next level!",
       image: "/headshots/william_levinson.jpeg?height=100&width=100",
     },
     {
