@@ -1,3 +1,5 @@
+@use "src/styles/foundations/_response_mixins.scss" as *;
+
 .testimonialCard {
   background-color: var(--color-bg2);
   padding: 2rem;
@@ -36,6 +38,11 @@
   color: var(--foreground);
   max-width: 65ch;
   word-wrap: break-word;
+  @include breakpoint(w-sm){
+    grid-row: 2;
+    grid-column: 1 / span 3;
+
+  }
 }
 
 .author {
@@ -45,6 +52,12 @@
   align-items: center;
   gap: 1rem;
   align-self: end;
+
+  @include breakpoint(w-sm){
+    grid-row: 4;
+    grid-column: 1 / span 3;
+
+  }
 
   .avatarWrapper {
     width: 6rem;
@@ -139,4 +152,25 @@
 .company {
   color: var(--color-label);
   font-size: 0.875rem;
+}
+
+.quoteIconEnd, .quoteIconStart {
+  @include breakpoint(w-med){
+    width:20px!important;
+    height:unset!important;
+  }
+
+}
+
+.quoteIconStart {
+  @include breakpoint(w-sm){
+    grid-row: 1;
+  }
+}
+
+.quoteIconEnd {
+  @include breakpoint(w-sm){
+    grid-row: 3;
+    justify-self: end;
+  }
 }
